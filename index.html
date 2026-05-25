@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The Ba Asian Cuisine v pražském Novém Městě. Vietnamské polévky, wok speciality, bánh mì, matcha, káva, čaj a domácí limonády."
+    />
+    <title>The Ba - Asian Cuisine</title>
+    <link rel="stylesheet" href="styles.css?v=cs1" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="The Ba úvodní stránka">
+        <span class="brand-mark">Ba</span>
+        <span>
+          <strong>The Ba</strong>
+          <small>Asian Cuisine</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Přepnout jazyk">
+          <button type="button" class="is-active" data-lang="cs">CS</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#menu">Menu</a>
+        <a href="#hours">Otevírací doba</a>
+        <a href="#visit">Kontakt</a>
+        <a class="nav-action" href="tel:+420774054999">Zavolat</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Odborů 3, Praha - Nové Město</p>
+          <h1 id="hero-title">The Ba</h1>
+          <p class="hero-subtitle">Vietnamská kuchyně v centru Prahy: poctivé polévky, wok speciality, čerstvé bánh mì, matcha nápoje a káva.</p>
+          <div class="hero-actions" aria-label="Hlavní akce">
+            <a class="button button-primary" href="#menu">Zobrazit menu</a>
+            <a class="button button-secondary" href="https://maps.google.com/?q=Odbor%C5%AF%203%2C%20120%2000%20Prague" target="_blank" rel="noreferrer">Otevřít mapu</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Prostor pro fotografii restaurace">
+          <div class="photo-frame photo-frame-large">
+            <svg viewBox="0 0 420 420" role="img" aria-labelledby="bowl-title" focusable="false">
+              <title id="bowl-title">Ilustrovaná miska nudlí jako dočasný vizuál</title>
+              <defs>
+                <linearGradient id="broth" x1="0" x2="1" y1="0" y2="1">
+                  <stop stop-color="#ffcf7c" />
+                  <stop offset="1" stop-color="#f0553b" />
+                </linearGradient>
+              </defs>
+              <path d="M94 214h232c-8 72-54 118-116 118S102 286 94 214Z" fill="#ffffff" opacity=".92" />
+              <path d="M105 218h210c-9 54-47 88-105 88s-96-34-105-88Z" fill="url(#broth)" />
+              <path d="M120 196c32 15 71 15 105 0 27-12 52-13 78-2" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" />
+              <path d="M138 234c28 15 64 16 97 0 25-12 48-11 73 0" fill="none" stroke="#13302c" stroke-width="7" stroke-linecap="round" opacity=".72" />
+              <path d="M151 185h150" stroke="#13302c" stroke-width="9" stroke-linecap="round" />
+              <path d="M300 102 132 205" stroke="#7a1f35" stroke-width="12" stroke-linecap="round" />
+              <circle cx="285" cy="166" r="22" fill="#5da35d" />
+              <circle cx="172" cy="255" r="18" fill="#fff6d2" />
+              <circle cx="176" cy="255" r="8" fill="#f0b238" />
+            </svg>
+            <span>Fotografie připravujeme</span>
+          </div>
+          <div class="hero-note">
+            <strong>Dnes</strong>
+            <span data-today-hours>Otevřeno 11:00-22:00</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-info" aria-label="Hlavní nabídka restaurace">
+        <div>
+          <strong>Vietnamské klasiky</strong>
+          <span>Pho, bún misky a čerstvé závitky</span>
+        </div>
+        <div>
+          <strong>Wok na oběd i večeři</strong>
+          <span>Kari, udon nudle a smažené nudle</span>
+        </div>
+        <div>
+          <strong>Matcha a káva</strong>
+          <span>Matcha cloud, vietnamská káva a čaje</span>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <p class="eyebrow">Menu</p>
+          <h2 id="menu-title">Čerstvě připravené a přehledně naceněné.</h2>
+          <p>Vyberte si kategorii nebo vyhledejte jídlo, surovinu, nápoj či cenu.</p>
+        </div>
+
+        <div class="menu-tools">
+          <div class="category-tabs" role="tablist" aria-label="Kategorie menu" data-categories></div>
+          <label class="search-box">
+            <span>Hledat v menu</span>
+            <input type="search" placeholder="Pho, matcha, tofu..." data-search />
+          </label>
+        </div>
+
+        <div class="menu-grid" data-menu></div>
+        <p class="empty-state" hidden data-empty>Tomuto hledání neodpovídá žádná položka.</p>
+      </section>
+
+      <section class="split-section" id="hours" aria-labelledby="hours-title">
+        <div class="section-heading section-heading-left">
+          <p class="eyebrow">Otevírací doba</p>
+          <h2 id="hours-title">Jsme otevřeni každý den v Novém Městě.</h2>
+          <p>Zastavte se na oběd, večeři, kávu i osvěžující nápoje během celého týdne.</p>
+        </div>
+        <div class="hours-list">
+          <div>
+            <span>Pondělí - sobota</span>
+            <strong>11:00 - 22:00</strong>
+          </div>
+          <div>
+            <span>Neděle</span>
+            <strong>12:00 - 21:00</strong>
+          </div>
+          <div>
+            <span>Svátky</span>
+            <strong>12:00 - 21:00</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-section" aria-labelledby="reviews-title">
+        <div class="reviews-summary">
+          <p class="eyebrow">Google recenze</p>
+          <h2 id="reviews-title">Zkušenosti hostů budou tady.</h2>
+          <p>Jakmile bude profil připravený, tento blok propojíme se skutečnými recenzemi a aktuálním hodnocením z Googlu.</p>
+          <a class="button button-secondary" href="https://www.google.com/search?q=The+Ba+Asian+Cuisine+Odbor%C5%AF+3+Prague" target="_blank" rel="noreferrer">Najít na Googlu</a>
+        </div>
+
+        <div class="rating-panel" aria-label="Náhled Google recenzí">
+          <div class="rating-topline">
+            <span class="google-mark">G</span>
+            <div>
+              <strong>Hodnocení Google</strong>
+              <small>Připravujeme</small>
+            </div>
+          </div>
+          <div class="rating-score">5,0</div>
+          <div class="stars" aria-label="Dočasné pětihvězdičkové hodnocení">★★★★★</div>
+          <p>Skutečné recenze hostů se zde zobrazí po napojení na Google profil.</p>
+        </div>
+
+        <div class="review-cards" aria-label="Dočasné recenze">
+          <article class="review-card">
+            <div class="review-avatar">TB</div>
+            <div>
+              <strong>Nová recenze</strong>
+              <span>Ukázka</span>
+            </div>
+            <p>Krátký komentář hosta k pho, obědu, obsluze nebo nápojům.</p>
+          </article>
+          <article class="review-card">
+            <div class="review-avatar">G</div>
+            <div>
+              <strong>Host z Googlu</strong>
+              <span>Ukázka</span>
+            </div>
+            <p>Tento text později nahradí skutečná recenze z propojeného profilu.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="visit-section" id="visit" aria-labelledby="visit-title">
+        <div class="visit-copy">
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="visit-title">Najdete nás na adrese Odborů 3.</h2>
+          <p>Restaurace The Ba se nachází na adrese Odborů 3, 120 00 Praha - Nové Město.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="tel:+420774054999">+420 774 054 999</a>
+            <a class="button button-secondary" href="https://maps.google.com/?q=Odbor%C5%AF%203%2C%20120%2000%20Prague" target="_blank" rel="noreferrer">Navigovat</a>
+          </div>
+        </div>
+        <div class="map-placeholder" aria-label="Dočasný prostor pro mapu">
+          <span>Mapa</span>
+          <strong>Odborů 3</strong>
+          <small>Sem později doplníme skutečnou mapu nebo fotografii restaurace.</small>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>The Ba - Asian Cuisine</p>
+      <p>Odborů 3, 120 00 Praha - Nové Město</p>
+    </footer>
+
+    <script src="script.js?v=lang1"></script>
+  </body>
+</html>
