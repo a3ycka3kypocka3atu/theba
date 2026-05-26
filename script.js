@@ -461,6 +461,13 @@ const menuItems = [
   },
   {
     category: "drinks",
+    image: {
+      src: "Ф/macha.jpg",
+      alt: {
+        cs: "Matcha nápoj v kelímku",
+        en: "Matcha drink in a cup"
+      }
+    },
     cs: {
       name: "Matcha Latte",
       price: "129 Kč",
@@ -777,6 +784,11 @@ function renderMenu() {
             <span class="price">${localized.price}</span>
           </div>
           <p>${localized.description}</p>
+          ${
+            item.image
+              ? `<img class="menu-card-photo" src="${item.image.src}" alt="${item.image.alt[state.lang]}" loading="lazy" />`
+              : ""
+          }
           <div class="tag-row" aria-label="${copy.itemOptions} ${localized.name}">
             ${localized.tags
               .map((tag, index) => {
