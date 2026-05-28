@@ -15,8 +15,6 @@ const i18n = {
       menu: "Zobrazit menu",
       map: "Otevřít mapu",
       visualLabel: "Prostor pro fotografii restaurace",
-      imageTitle: "Ilustrovaná miska nudlí jako dočasný vizuál",
-      photoSoon: "Fotografie připravujeme",
       today: "Dnes",
       openRegular: "Otevřeno 11:00-22:00",
       openSunday: "Otevřeno 12:00-21:00"
@@ -98,8 +96,6 @@ const i18n = {
       menu: "View menu",
       map: "Open map",
       visualLabel: "Restaurant photo area",
-      imageTitle: "Illustrated noodle bowl placeholder",
-      photoSoon: "Photos coming soon",
       today: "Today",
       openRegular: "Open 11:00-22:00",
       openSunday: "Open 12:00-21:00"
@@ -675,8 +671,6 @@ function translateStaticCopy() {
   setText(".hero-actions .button-primary", copy.hero.menu);
   setText(".hero-actions .button-secondary", copy.hero.map);
   setAttribute(".hero-visual", "aria-label", copy.hero.visualLabel);
-  setText("#bowl-title", copy.hero.imageTitle);
-  setText(".photo-frame span", copy.hero.photoSoon);
   setText(".hero-note strong", copy.hero.today);
 
   document.querySelectorAll(".quick-info div").forEach((card, index) => {
