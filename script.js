@@ -33,6 +33,11 @@ const i18n = {
       empty: "Tomuto hledání neodpovídá žádná položka.",
       itemOptions: "Možnosti položky"
     },
+    gallery: {
+      eyebrow: "Fotografie",
+      title: "Atmosféra The Ba",
+      label: "Fotografie restaurace a nápojů The Ba"
+    },
     hours: {
       eyebrow: "Otevírací doba",
       title: "Jsme otevřeni každý den v Novém Městě.",
@@ -113,6 +118,11 @@ const i18n = {
       searchPlaceholder: "Pho, matcha, tofu...",
       empty: "No menu items match this search.",
       itemOptions: "Options for"
+    },
+    gallery: {
+      eyebrow: "Photos",
+      title: "Inside The Ba",
+      label: "Photos of The Ba restaurant and drinks"
     },
     hours: {
       eyebrow: "Opening Hours",
@@ -687,6 +697,10 @@ function translateStaticCopy() {
   setText(".search-box span", copy.menu.searchLabel);
   searchInput.placeholder = copy.menu.searchPlaceholder;
   emptyState.textContent = copy.menu.empty;
+
+  setText(".gallery-section .eyebrow", copy.gallery.eyebrow);
+  setText("#gallery-title", copy.gallery.title);
+  setAttribute(".gallery-grid", "aria-label", copy.gallery.label);
 
   setText("#hours .eyebrow", copy.hours.eyebrow);
   setText("#hours-title", copy.hours.title);
