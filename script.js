@@ -31,7 +31,8 @@ const i18n = {
       searchLabel: "Hledat v menu",
       searchPlaceholder: "Pho, matcha, tofu...",
       empty: "Tomuto hledání neodpovídá žádná položka.",
-      itemOptions: "Možnosti položky"
+      itemOptions: "Možnosti položky",
+      detail: "Více o jídle"
     },
     gallery: {
       eyebrow: "Fotografie",
@@ -117,7 +118,8 @@ const i18n = {
       searchLabel: "Search menu",
       searchPlaceholder: "Pho, matcha, tofu...",
       empty: "No menu items match this search.",
-      itemOptions: "Options for"
+      itemOptions: "Options for",
+      detail: "Dish detail"
     },
     gallery: {
       eyebrow: "Photos",
@@ -239,6 +241,7 @@ const menuItems = [
   {
     category: "vietnamese",
     featured: true,
+    detailPath: "vietnamske-speciality/pho-bo-classic.html",
     cs: {
       name: "Pho Bo Classic",
       price: "229 Kč",
@@ -254,6 +257,7 @@ const menuItems = [
   },
   {
     category: "vietnamese",
+    detailPath: "vietnamske-speciality/pho-bo-tai-lan.html",
     cs: {
       name: "Pho Bo Tai Lan",
       price: "259 Kč",
@@ -269,6 +273,7 @@ const menuItems = [
   },
   {
     category: "vietnamese",
+    detailPath: "vietnamske-speciality/pho-ga.html",
     cs: {
       name: "Pho Ga",
       price: "219 Kč",
@@ -284,6 +289,7 @@ const menuItems = [
   },
   {
     category: "vietnamese",
+    detailPath: "vietnamske-speciality/bun-tom-hue.html",
     cs: {
       name: "Bun Tom Hue",
       price: "229 Kč",
@@ -300,6 +306,7 @@ const menuItems = [
   {
     category: "vietnamese",
     featured: true,
+    detailPath: "vietnamske-speciality/bun-bo-nam-bo.html",
     cs: {
       name: "Bun Bo Nam Bo",
       price: "229 Kč",
@@ -315,6 +322,7 @@ const menuItems = [
   },
   {
     category: "vietnamese",
+    detailPath: "vietnamske-speciality/bun-cha.html",
     cs: {
       name: "Bun Cha",
       price: "249 Kč",
@@ -330,6 +338,7 @@ const menuItems = [
   },
   {
     category: "vietnamese",
+    detailPath: "vietnamske-speciality/bun-nem.html",
     cs: {
       name: "Bun Nem",
       price: "229 Kč",
@@ -345,6 +354,7 @@ const menuItems = [
   },
   {
     category: "vietnamese",
+    detailPath: "vietnamske-speciality/bun-tofu.html",
     cs: {
       name: "Bun Tofu",
       price: "219 Kč",
@@ -798,6 +808,7 @@ function renderMenu() {
               })
               .join("")}
           </div>
+          ${item.detailPath ? `<a class="menu-card-link" href="${item.detailPath}">${copy.detail}</a>` : ""}
         </article>
       `;
     })
