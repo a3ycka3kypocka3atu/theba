@@ -467,13 +467,6 @@ const menuItems = [
   },
   {
     category: "drinks",
-    image: {
-      src: "Ф/macha.jpg",
-      alt: {
-        cs: "Matcha nápoj v kelímku",
-        en: "Matcha drink in a cup"
-      }
-    },
     cs: {
       name: "Matcha Latte",
       price: "129 Kč",
