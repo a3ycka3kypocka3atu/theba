@@ -484,6 +484,17 @@ h2 {
   box-shadow: 0 14px 40px rgba(18, 32, 31, 0.06);
 }
 
+a.menu-card {
+  cursor: pointer;
+}
+
+a.menu-card:hover,
+a.menu-card:focus-visible {
+  border-color: rgba(35, 116, 93, 0.32);
+  box-shadow: 0 20px 54px rgba(18, 32, 31, 0.1);
+  transform: translateY(-1px);
+}
+
 .menu-card.is-featured {
   border-color: rgba(214, 66, 49, 0.35);
   background: linear-gradient(180deg, #fff 0%, rgba(255, 240, 221, 0.84) 100%);
@@ -573,7 +584,8 @@ h2 {
 }
 
 .menu-card-link:hover,
-.menu-card-link:focus-visible {
+a.menu-card:hover .menu-card-link,
+a.menu-card:focus-visible .menu-card-link {
   color: #fff;
   background: var(--green);
 }

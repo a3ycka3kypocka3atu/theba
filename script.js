@@ -241,7 +241,10 @@ const menuItems = [
   {
     category: "vietnamese",
     featured: true,
-    detailPath: "vietnamske-speciality/pho-bo-classic.html",
+    detailPath: {
+      cs: "vietnamske-speciality/pho-bo-classic.html",
+      en: "en/vietnamese-specialities/pho-bo-classic.html"
+    },
     cs: {
       name: "Pho Bo Classic",
       price: "229 Kč",
@@ -257,7 +260,10 @@ const menuItems = [
   },
   {
     category: "vietnamese",
-    detailPath: "vietnamske-speciality/pho-bo-tai-lan.html",
+    detailPath: {
+      cs: "vietnamske-speciality/pho-bo-tai-lan.html",
+      en: "en/vietnamese-specialities/pho-bo-tai-lan.html"
+    },
     cs: {
       name: "Pho Bo Tai Lan",
       price: "259 Kč",
@@ -273,7 +279,10 @@ const menuItems = [
   },
   {
     category: "vietnamese",
-    detailPath: "vietnamske-speciality/pho-ga.html",
+    detailPath: {
+      cs: "vietnamske-speciality/pho-ga.html",
+      en: "en/vietnamese-specialities/pho-ga.html"
+    },
     cs: {
       name: "Pho Ga",
       price: "219 Kč",
@@ -289,7 +298,10 @@ const menuItems = [
   },
   {
     category: "vietnamese",
-    detailPath: "vietnamske-speciality/bun-tom-hue.html",
+    detailPath: {
+      cs: "vietnamske-speciality/bun-tom-hue.html",
+      en: "en/vietnamese-specialities/bun-tom-hue.html"
+    },
     cs: {
       name: "Bun Tom Hue",
       price: "229 Kč",
@@ -306,7 +318,10 @@ const menuItems = [
   {
     category: "vietnamese",
     featured: true,
-    detailPath: "vietnamske-speciality/bun-bo-nam-bo.html",
+    detailPath: {
+      cs: "vietnamske-speciality/bun-bo-nam-bo.html",
+      en: "en/vietnamese-specialities/bun-bo-nam-bo.html"
+    },
     cs: {
       name: "Bun Bo Nam Bo",
       price: "229 Kč",
@@ -322,7 +337,10 @@ const menuItems = [
   },
   {
     category: "vietnamese",
-    detailPath: "vietnamske-speciality/bun-cha.html",
+    detailPath: {
+      cs: "vietnamske-speciality/bun-cha.html",
+      en: "en/vietnamese-specialities/bun-cha.html"
+    },
     cs: {
       name: "Bun Cha",
       price: "249 Kč",
@@ -338,7 +356,10 @@ const menuItems = [
   },
   {
     category: "vietnamese",
-    detailPath: "vietnamske-speciality/bun-nem.html",
+    detailPath: {
+      cs: "vietnamske-speciality/bun-nem.html",
+      en: "en/vietnamese-specialities/bun-nem.html"
+    },
     cs: {
       name: "Bun Nem",
       price: "229 Kč",
@@ -354,7 +375,10 @@ const menuItems = [
   },
   {
     category: "vietnamese",
-    detailPath: "vietnamske-speciality/bun-tofu.html",
+    detailPath: {
+      cs: "vietnamske-speciality/bun-tofu.html",
+      en: "en/vietnamese-specialities/bun-tofu.html"
+    },
     cs: {
       name: "Bun Tofu",
       price: "219 Kč",
@@ -788,8 +812,15 @@ function renderMenu() {
   menuContainer.innerHTML = items
     .map((item) => {
       const localized = item[state.lang];
+      const cardClass = `menu-card ${item.featured ? "is-featured" : ""}`;
+      const detailPath = typeof item.detailPath === "string" ? item.detailPath : item.detailPath?.[state.lang];
+      const cardTag = detailPath ? "a" : "article";
+      const cardAttributes = detailPath
+        ? `class="${cardClass}" href="${detailPath}" aria-label="${copy.detail} ${localized.name}"`
+        : `class="${cardClass}"`;
+
       return `
-        <article class="menu-card ${item.featured ? "is-featured" : ""}">
+        <${cardTag} ${cardAttributes}>
           <div class="menu-card-header">
             <h3>${localized.name}</h3>
             <span class="price">${localized.price}</span>
@@ -808,8 +839,8 @@ function renderMenu() {
               })
               .join("")}
           </div>
-          ${item.detailPath ? `<a class="menu-card-link" href="${item.detailPath}">${copy.detail}</a>` : ""}
-        </article>
+          ${detailPath ? `<span class="menu-card-link">${copy.detail}</span>` : ""}
+        </${cardTag}>
       `;
     })
     .join("");
