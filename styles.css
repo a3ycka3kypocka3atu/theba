@@ -146,7 +146,11 @@ input {
   background: rgba(255, 255, 255, 0.76);
 }
 
-.lang-switch button {
+.lang-switch button,
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 38px;
   min-height: 34px;
   border: 0;
@@ -160,7 +164,10 @@ input {
 
 .lang-switch button:hover,
 .lang-switch button:focus-visible,
-.lang-switch button.is-active {
+.lang-switch button.is-active,
+.lang-switch a:hover,
+.lang-switch a:focus-visible,
+.lang-switch a.is-active {
   color: #fff;
   background: var(--ink);
 }
@@ -1022,6 +1029,9 @@ a.menu-card:focus-visible .menu-card-link {
 }
 
 .related-grid a {
+  display: grid;
+  gap: 8px;
+  align-content: start;
   border: 1px solid rgba(18, 32, 31, 0.1);
   border-radius: 8px;
   padding: 16px;
@@ -1029,10 +1039,32 @@ a.menu-card:focus-visible .menu-card-link {
   font-weight: 900;
 }
 
+.related-grid strong,
+.related-grid span {
+  display: block;
+}
+
+.related-grid strong {
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.related-grid span {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .related-grid a:hover,
 .related-grid a:focus-visible {
   border-color: rgba(35, 116, 93, 0.34);
   color: var(--green);
+}
+
+.related-grid a:hover span,
+.related-grid a:focus-visible span {
+  color: #41534f;
 }
 
 @media (max-width: 1050px) {

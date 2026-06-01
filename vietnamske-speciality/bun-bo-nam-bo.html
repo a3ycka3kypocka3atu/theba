@@ -13,7 +13,13 @@
   <body class="dish-page">
     <header class="site-header" data-header>
       <a class="brand" href="../index.html#top" aria-label="The Ba úvodní stránka"><span class="brand-mark">Ba</span><span><strong>The Ba</strong><small>Asian Cuisine</small></span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span></button>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Přepnout jazyk">
+          <a class="is-active" href="bun-bo-nam-bo.html">CS</a>
+          <a class="" href="../en/vietnamese-specialities/bun-bo-nam-bo.html">EN</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span></button>
+      </div>
       <nav class="site-nav" id="site-nav" data-nav><a href="../index.html#menu">Menu</a><a href="../index.html#hours">Otevírací doba</a><a href="../index.html#visit">Kontakt</a><a class="nav-action" href="tel:+420774054999">Zavolat</a></nav>
     </header>
     <main>
@@ -31,7 +37,7 @@
         </article>
         <aside class="dish-side"><div class="dish-panel"><h2>Co obsahuje</h2><ul><li>Hovězí maso</li><li>Rýžové nudle</li><li>Salát</li><li>Bylinky</li><li>Arašídy</li></ul></div><div class="dish-nav"><a class="button button-primary" href="../index.html#menu">Zobrazit menu</a><a class="button button-secondary" href="tel:+420774054999">Objednat telefonicky</a></div></aside>
       </section>
-      <section class="related-dishes"><p class="eyebrow">Další speciality</p><h2>Vyzkoušejte také</h2><div class="related-grid"><a href="bun-cha.html">Bun Cha</a><a href="bun-nem.html">Bun Nem</a><a href="pho-bo-classic.html">Pho Bo Classic</a><a href="bun-tofu.html">Bun Tofu</a></div></section>
+      <section class="related-dishes"><p class="eyebrow">Další speciality</p><h2>Vyzkoušejte také</h2><div class="related-grid"><a href="bun-cha.html"><strong>Bun Cha</strong><span>Hanojská specialita s grilovaným vepřovým masem, rýžovými nudlemi, sezamem a bylinkami.</span></a><a href="bun-nem.html"><strong>Bun Nem</strong><span>Křupavé smažené závitky Nem s rýžovými nudlemi, salátem a sladkokyselou omáčkou.</span></a><a href="pho-bo-classic.html"><strong>Pho Bo Classic</strong><span>Tradiční hovězí pho s dlouze taženým vývarem, rýžovými nudlemi a čerstvým koriandrem.</span></a><a href="bun-tofu.html"><strong>Bun Tofu</strong><span>Lehká vegetariánská miska s tofu, rýžovými nudlemi, zeleninou, bylinkami a arašídy.</span></a></div></section>
     </main>
     <footer class="site-footer"><p>The Ba - Asian Cuisine</p><p>Odborů 3, 120 00 Praha - Nové Město</p></footer>
     <script>const navToggle=document.querySelector("[data-nav-toggle]"),nav=document.querySelector("[data-nav]");navToggle?.addEventListener("click",()=>{const isOpen=nav.classList.toggle("is-open");document.body.classList.toggle("nav-open",isOpen);navToggle.setAttribute("aria-expanded",String(isOpen));});</script>

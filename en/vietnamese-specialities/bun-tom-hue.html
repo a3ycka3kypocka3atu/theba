@@ -13,7 +13,17 @@
     </script>
   </head>
   <body class="dish-page">
-    <header class="site-header" data-header><a class="brand" href="../../index.html#top" aria-label="The Ba home"><span class="brand-mark">Ba</span><span><strong>The Ba</strong><small>Asian Cuisine</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" data-nav><a href="../../index.html#menu">Menu</a><a href="../../index.html#hours">Hours</a><a href="../../index.html#visit">Visit</a><a class="nav-action" href="tel:+420774054999">Call</a></nav></header>
+    <header class="site-header" data-header>
+      <a class="brand" href="../../index.html#top" aria-label="The Ba home"><span class="brand-mark">Ba</span><span><strong>The Ba</strong><small>Asian Cuisine</small></span></a>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Switch language">
+          <a class="" href="../../vietnamske-speciality/bun-tom-hue.html">CS</a>
+          <a class="is-active" href="bun-tom-hue.html">EN</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span></button>
+      </div>
+      <nav class="site-nav" id="site-nav" data-nav><a href="../../index.html#menu">Menu</a><a href="../../index.html#hours">Hours</a><a href="../../index.html#visit">Visit</a><a class="nav-action" href="tel:+420774054999">Call</a></nav>
+    </header>
     <main>
       <section class="dish-hero"><div><p class="eyebrow">Vietnamese Specialities</p><h1>Bun Tom Hue</h1><p class="dish-lead">A fresh rice noodle bowl inspired by the cooking of central Vietnam, with shrimps, herbs, vegetables and crisp bean sprouts.</p></div><div class="dish-meta"><div><span>Price</span><strong>229 CZK</strong></div><div><span>Style</span><strong>Shrimp and rice noodles</strong></div><div><span>Address</span><strong>Odborů 3, Prague</strong></div></div></section>
       <section class="dish-content">
@@ -25,7 +35,7 @@
         </article>
         <aside class="dish-side"><div class="dish-panel"><h2>Inside the bowl</h2><ul><li>Shrimps</li><li>Rice noodles</li><li>Fresh herbs</li><li>Vegetables</li><li>Bean sprouts</li></ul></div><div class="dish-nav"><a class="button button-primary" href="../../index.html#menu">View menu</a><a class="button button-secondary" href="tel:+420774054999">Order by phone</a></div></aside>
       </section>
-      <section class="related-dishes"><p class="eyebrow">More specialities</p><h2>Try these next</h2><div class="related-grid"><a href="pho-ga.html">Pho Ga</a><a href="bun-bo-hue.html">Bun Bo Hue</a><a href="bun-bo-nam-bo.html">Bun Bo Nam Bo</a><a href="bun-tofu.html">Bun Tofu</a></div></section>
+      <section class="related-dishes"><p class="eyebrow">More specialities</p><h2>Try these next</h2><div class="related-grid"><a href="pho-ga.html"><strong>Pho Ga</strong><span>A lighter chicken pho with delicate broth, rice noodles, onion, coriander and bean sprouts.</span></a><a href="bun-bo-hue.html"><strong>Bun Bo Hue</strong><span>A bold Hue speciality with aromatic broth, beef, rice noodles and fresh herbs.</span></a><a href="bun-bo-nam-bo.html"><strong>Bun Bo Nam Bo</strong><span>A southern-style beef noodle bowl with salad, herbs, peanuts and fried onion.</span></a><a href="bun-tofu.html"><strong>Bun Tofu</strong><span>A vegetarian Vietnamese bowl with tofu, rice noodles, fresh herbs, vegetables and peanuts.</span></a></div></section>
     </main>
     <footer class="site-footer"><p>The Ba - Asian Cuisine</p><p>Odborů 3, 120 00 Prague - New Town</p></footer><script>const navToggle=document.querySelector("[data-nav-toggle]"),nav=document.querySelector("[data-nav]");navToggle?.addEventListener("click",()=>{const isOpen=nav.classList.toggle("is-open");document.body.classList.toggle("nav-open",isOpen);navToggle.setAttribute("aria-expanded",String(isOpen));});</script>
   </body>
