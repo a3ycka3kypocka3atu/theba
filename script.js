@@ -180,6 +180,10 @@ const categoryKeys = ["all", "starters", "vietnamese", "wok", "noodles", "banhMi
 const menuItems = [
   {
     category: "starters",
+    detailPath: {
+      cs: "predkrmy/vege-rolls.html",
+      en: "en/starters/vege-rolls.html"
+    },
     cs: {
       name: "Vegetariánské závitky",
       price: "89 Kč",
@@ -195,6 +199,10 @@ const menuItems = [
   },
   {
     category: "starters",
+    detailPath: {
+      cs: "predkrmy/fried-spring-rolls.html",
+      en: "en/starters/fried-spring-rolls.html"
+    },
     cs: {
       name: "Smažené jarní závitky",
       price: "109 Kč",
@@ -210,6 +218,10 @@ const menuItems = [
   },
   {
     category: "starters",
+    detailPath: {
+      cs: "predkrmy/shrimps-tempura.html",
+      en: "en/starters/shrimps-tempura.html"
+    },
     cs: {
       name: "Krevety tempura",
       price: "129 Kč",
@@ -225,6 +237,10 @@ const menuItems = [
   },
   {
     category: "starters",
+    detailPath: {
+      cs: "predkrmy/fresh-spring-rolls.html",
+      en: "en/starters/fresh-spring-rolls.html"
+    },
     cs: {
       name: "Čerstvé závitky",
       price: "129 Kč",
@@ -395,6 +411,10 @@ const menuItems = [
   {
     category: "wok",
     featured: true,
+    detailPath: {
+      cs: "wok-speciality/red-curry-with-rice.html",
+      en: "en/wok-specialities/red-curry-with-rice.html"
+    },
     cs: {
       name: "Červené kari s rýží",
       price: "249 Kč",
@@ -410,6 +430,10 @@ const menuItems = [
   },
   {
     category: "wok",
+    detailPath: {
+      cs: "wok-speciality/yellow-curry-with-rice.html",
+      en: "en/wok-specialities/yellow-curry-with-rice.html"
+    },
     cs: {
       name: "Žluté kari s rýží",
       price: "249 Kč",
@@ -425,6 +449,10 @@ const menuItems = [
   },
   {
     category: "wok",
+    detailPath: {
+      cs: "wok-speciality/udon-wok.html",
+      en: "en/wok-specialities/udon-wok.html"
+    },
     cs: {
       name: "Udon z woku",
       price: "229 Kč",
@@ -440,6 +468,10 @@ const menuItems = [
   },
   {
     category: "wok",
+    detailPath: {
+      cs: "wok-speciality/udon-mango-curry.html",
+      en: "en/wok-specialities/udon-mango-curry.html"
+    },
     cs: {
       name: "Udon mango kari",
       price: "249 Kč",
@@ -455,6 +487,10 @@ const menuItems = [
   },
   {
     category: "noodles",
+    detailPath: {
+      cs: "smazene-nudle/stir-fried-pho-noodles.html",
+      en: "en/stir-fried-noodles/stir-fried-pho-noodles.html"
+    },
     cs: {
       name: "Restované pho nudle",
       price: "239 Kč",
@@ -470,6 +506,10 @@ const menuItems = [
   },
   {
     category: "noodles",
+    detailPath: {
+      cs: "smazene-nudle/stir-fried-glass-noodles.html",
+      en: "en/stir-fried-noodles/stir-fried-glass-noodles.html"
+    },
     cs: {
       name: "Restované skleněné nudle",
       price: "239 Kč",
@@ -486,6 +526,10 @@ const menuItems = [
   {
     category: "banhMi",
     featured: true,
+    detailPath: {
+      cs: "vietnamske-banh-mi/vietnamese-banh-mi.html",
+      en: "en/vietnamese-banh-mi/vietnamese-banh-mi.html"
+    },
     cs: {
       name: "Vietnamské bánh mì",
       price: "189 Kč",
