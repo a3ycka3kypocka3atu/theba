@@ -261,6 +261,13 @@ const menuItems = [
       cs: "vietnamske-speciality/pho-bo-classic.html",
       en: "en/vietnamese-specialities/pho-bo-classic.html"
     },
+    image: {
+      src: "photo%20menu%202/Pho%20Bo%20Classic.png",
+      alt: {
+        cs: "Pho Bo Classic",
+        en: "Pho Bo Classic"
+      }
+    },
     cs: {
       name: "Pho Bo Classic",
       price: "229 Kč",
@@ -279,6 +286,13 @@ const menuItems = [
     detailPath: {
       cs: "vietnamske-speciality/pho-bo-tai-lan.html",
       en: "en/vietnamese-specialities/pho-bo-tai-lan.html"
+    },
+    image: {
+      src: "photo%20menu%202/Pho%20Bo%20Tai%20Lan.png",
+      alt: {
+        cs: "Pho Bo Tai Lan",
+        en: "Pho Bo Tai Lan"
+      }
     },
     cs: {
       name: "Pho Bo Tai Lan",
@@ -299,6 +313,13 @@ const menuItems = [
       cs: "vietnamske-speciality/pho-ga.html",
       en: "en/vietnamese-specialities/pho-ga.html"
     },
+    image: {
+      src: "photo%20menu%202/Pho%20Ga.png",
+      alt: {
+        cs: "Pho Ga",
+        en: "Pho Ga"
+      }
+    },
     cs: {
       name: "Pho Ga",
       price: "219 Kč",
@@ -317,6 +338,13 @@ const menuItems = [
     detailPath: {
       cs: "vietnamske-speciality/bun-tom-hue.html",
       en: "en/vietnamese-specialities/bun-tom-hue.html"
+    },
+    image: {
+      src: "photo%20menu%202/Bun%20Tom%20Hue.png",
+      alt: {
+        cs: "Bun Tom Hue",
+        en: "Bun Tom Hue"
+      }
     },
     cs: {
       name: "Bun Tom Hue",
@@ -338,6 +366,13 @@ const menuItems = [
       cs: "vietnamske-speciality/bun-bo-nam-bo.html",
       en: "en/vietnamese-specialities/bun-bo-nam-bo.html"
     },
+    image: {
+      src: "photo%20menu%202/Bun%20Bo%20Nam%20Bo.png",
+      alt: {
+        cs: "Bun Bo Nam Bo",
+        en: "Bun Bo Nam Bo"
+      }
+    },
     cs: {
       name: "Bun Bo Nam Bo",
       price: "229 Kč",
@@ -356,6 +391,13 @@ const menuItems = [
     detailPath: {
       cs: "vietnamske-speciality/bun-cha.html",
       en: "en/vietnamese-specialities/bun-cha.html"
+    },
+    image: {
+      src: "photo%20menu%202/Bun%20Cha.png",
+      alt: {
+        cs: "Bun Cha",
+        en: "Bun Cha"
+      }
     },
     cs: {
       name: "Bun Cha",
@@ -376,6 +418,13 @@ const menuItems = [
       cs: "vietnamske-speciality/bun-nem.html",
       en: "en/vietnamese-specialities/bun-nem.html"
     },
+    image: {
+      src: "photo%20menu%202/Bun%20Nem.png",
+      alt: {
+        cs: "Bun Nem",
+        en: "Bun Nem"
+      }
+    },
     cs: {
       name: "Bun Nem",
       price: "229 Kč",
@@ -394,6 +443,13 @@ const menuItems = [
     detailPath: {
       cs: "vietnamske-speciality/bun-tofu.html",
       en: "en/vietnamese-specialities/bun-tofu.html"
+    },
+    image: {
+      src: "photo%20menu%202/Bun%20Tofu.png",
+      alt: {
+        cs: "Bun Tofu",
+        en: "Bun Tofu"
+      }
     },
     cs: {
       name: "Bun Tofu",
