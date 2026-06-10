@@ -71,9 +71,9 @@ const i18n = {
       title: "Najdete nás na adrese Odborů 3.",
       intro: "Restaurace The Ba se nachází na adrese Odborů 3, 120 00 Praha - Nové Město.",
       directions: "Navigovat",
-      mapLabel: "Dočasný prostor pro mapu",
+      mapLabel: "Mapa restaurace The Ba na adrese Odborů 3",
       map: "Mapa",
-      mapSmall: "Sem později doplníme skutečnou mapu nebo fotografii restaurace.",
+      mapSmall: "Interaktivní mapa s bodem restaurace The Ba.",
       footerAddress: "Odborů 3, 120 00 Praha - Nové Město"
     },
     categories: {
@@ -158,9 +158,9 @@ const i18n = {
       title: "Find us at Odborů 3.",
       intro: "The Ba is located at Odborů 3, 120 00 Prague - New Town.",
       directions: "Directions",
-      mapLabel: "Temporary map area",
+      mapLabel: "Map of The Ba restaurant at Odborů 3",
       map: "Map",
-      mapSmall: "A real map or restaurant photo can be added here later.",
+      mapSmall: "Interactive map with The Ba restaurant location.",
       footerAddress: "Odborů 3, 120 00 Prague - New Town"
     },
     categories: {
@@ -861,6 +861,7 @@ function translateStaticCopy() {
   setText(".visit-copy p:not(.eyebrow)", copy.visit.intro);
   setText(".contact-actions .button-secondary", copy.visit.directions);
   setAttribute(".map-placeholder", "aria-label", copy.visit.mapLabel);
+  setAttribute(".map-placeholder iframe", "title", copy.visit.mapLabel);
   setText(".map-placeholder span", copy.visit.map);
   setText(".map-placeholder small", copy.visit.mapSmall);
   setText(".site-footer p:last-child", copy.visit.footerAddress);
