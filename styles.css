@@ -935,6 +935,11 @@ a.menu-card:focus-visible .menu-card-link {
   object-fit: cover;
 }
 
+.dish-photo-contain img {
+  padding: 18px;
+  object-fit: contain;
+}
+
 .dish-meta {
   display: grid;
   gap: 1px;
@@ -1127,15 +1132,15 @@ a.menu-card:focus-visible .menu-card-link {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .review-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .dish-side {
     position: static;
   }
 
   .related-grid {
-  .review-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
