@@ -935,9 +935,10 @@ a.menu-card:focus-visible .menu-card-link {
   object-fit: cover;
 }
 
-.dish-photo-contain img {
-  padding: 18px;
-  object-fit: contain;
+.dish-photo-wide {
+  align-self: center;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
 }
 
 .dish-meta {
