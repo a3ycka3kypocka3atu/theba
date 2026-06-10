@@ -49,22 +49,33 @@ const i18n = {
     },
     reviews: {
       eyebrow: "Google recenze",
-      title: "Zkušenosti hostů budou tady.",
-      intro: "Jakmile bude profil připravený, tento blok propojíme se skutečnými recenzemi a aktuálním hodnocením z Googlu.",
-      link: "Najít na Googlu",
-      panelLabel: "Náhled Google recenzí",
+      title: "Hosté nás na Googlu hodnotí 5,0.",
+      intro: "Podívejte se na aktuální recenze hostů, kteří chválí pho, kari, závitky i rychlou obsluhu v Odborů 3.",
+      link: "Zobrazit recenze",
+      panelLabel: "Aktuální hodnocení Google recenzí",
       rating: "Hodnocení Google",
-      coming: "Připravujeme",
+      coming: "15 recenzí",
       score: "5,0",
-      starsLabel: "Dočasné pětihvězdičkové hodnocení",
-      panelText: "Skutečné recenze hostů se zde zobrazí po napojení na Google profil.",
-      cardsLabel: "Dočasné recenze",
-      card1Title: "Nová recenze",
-      card1Meta: "Ukázka",
-      card1Text: "Krátký komentář hosta k pho, obědu, obsluze nebo nápojům.",
-      card2Title: "Host z Googlu",
-      card2Meta: "Ukázka",
-      card2Text: "Tento text později nahradí skutečná recenze z propojeného profilu."
+      starsLabel: "Pětihvězdičkové hodnocení Google",
+      panelText: "Aktuální veřejné hodnocení restaurace The Ba na Google Maps.",
+      cardsLabel: "Vybrané recenze z Google Maps",
+      cards: [
+        {
+          name: "Tomáš P",
+          meta: "5 hvězdiček · před 2 týdny",
+          text: "Výborné jídlo, doporučuji."
+        },
+        {
+          name: "Kyle Kizirian",
+          meta: "5 hvězdiček · před 3 dny",
+          text: "Pho a jarní závitky tady byly naprosto fantastické."
+        },
+        {
+          name: "Revina Putri",
+          meta: "5 hvězdiček · před 2 týdny",
+          text: "Červené kari je opravdu dobré, polévky pho jsou úžasné."
+        }
+      ]
     },
     visit: {
       eyebrow: "Kontakt",
@@ -136,22 +147,33 @@ const i18n = {
     },
     reviews: {
       eyebrow: "Google Reviews",
-      title: "Guest reviews will live here.",
-      intro: "Once the profile is ready, this block can connect to real Google reviews and show the current rating.",
-      link: "Find on Google",
-      panelLabel: "Google reviews preview",
+      title: "Guests rate us 5.0 on Google.",
+      intro: "See current guest reviews praising the pho, curry, spring rolls and fast service at Odborů 3.",
+      link: "View reviews",
+      panelLabel: "Current Google review rating",
       rating: "Google rating",
-      coming: "Coming soon",
+      coming: "15 reviews",
       score: "5.0",
-      starsLabel: "Temporary five-star rating",
-      panelText: "Real guest reviews will appear here after the Google profile is connected.",
-      cardsLabel: "Review placeholders",
-      card1Title: "New review",
-      card1Meta: "Preview",
-      card1Text: "A short guest note about pho, lunch, service or drinks.",
-      card2Title: "Google guest",
-      card2Meta: "Preview",
-      card2Text: "This text can later be replaced by a real review from the connected profile."
+      starsLabel: "Five-star Google rating",
+      panelText: "Current public rating for The Ba restaurant on Google Maps.",
+      cardsLabel: "Selected Google Maps reviews",
+      cards: [
+        {
+          name: "Tomáš P",
+          meta: "5 stars · 2 weeks ago",
+          text: "Excellent food, I recommend it."
+        },
+        {
+          name: "Kyle Kizirian",
+          meta: "5 stars · 3 days ago",
+          text: "The pho and spring rolls here were absolutely fantastic."
+        },
+        {
+          name: "Revina Putri",
+          meta: "5 stars · 2 weeks ago",
+          text: "The red curry is really good, the pho soups are amazing."
+        }
+      ]
     },
     visit: {
       eyebrow: "Visit",
@@ -849,12 +871,13 @@ function translateStaticCopy() {
   setText(".rating-panel p", copy.reviews.panelText);
   setAttribute(".review-cards", "aria-label", copy.reviews.cardsLabel);
   const reviewCards = document.querySelectorAll(".review-card");
-  reviewCards[0].querySelector("strong").textContent = copy.reviews.card1Title;
-  reviewCards[0].querySelector("span").textContent = copy.reviews.card1Meta;
-  reviewCards[0].querySelector("p").textContent = copy.reviews.card1Text;
-  reviewCards[1].querySelector("strong").textContent = copy.reviews.card2Title;
-  reviewCards[1].querySelector("span").textContent = copy.reviews.card2Meta;
-  reviewCards[1].querySelector("p").textContent = copy.reviews.card2Text;
+  copy.reviews.cards.forEach((review, index) => {
+    const card = reviewCards[index];
+    if (!card) return;
+    card.querySelector("strong").textContent = review.name;
+    card.querySelector("span").textContent = review.meta;
+    card.querySelector("p").textContent = review.text;
+  });
 
   setText(".visit-copy .eyebrow", copy.visit.eyebrow);
   setText("#visit-title", copy.visit.title);
