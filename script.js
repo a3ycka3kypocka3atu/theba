@@ -17,7 +17,7 @@ const i18n = {
       visualLabel: "Prostor pro fotografii restaurace",
       today: "Dnes",
       openRegular: "Otevřeno 11:00-22:00",
-      openSunday: "Otevřeno 12:00-21:00"
+      openSunday: "Otevřeno 11:30-22:00"
     },
     quick: [
       ["Vietnamské klasiky", "Pho, bún misky a čerstvé závitky"],
@@ -115,7 +115,7 @@ const i18n = {
       visualLabel: "Restaurant photo area",
       today: "Today",
       openRegular: "Open 11:00-22:00",
-      openSunday: "Open 12:00-21:00"
+      openSunday: "Open 11:30-22:00"
     },
     quick: [
       ["Vietnamese classics", "Pho, bún bowls and fresh rolls"],
