@@ -531,6 +531,13 @@ const menuItems = [
       cs: "wok-speciality/udon-wok.html",
       en: "en/wok-specialities/udon-wok.html"
     },
+    image: {
+      src: "assets/dishes/udon-wok-beef.jpg",
+      alt: {
+        cs: "Udon Wok s hovězím",
+        en: "Udon Wok with beef"
+      }
+    },
     cs: {
       name: "Udon z woku",
       price: "229 Kč",
@@ -549,6 +556,13 @@ const menuItems = [
     detailPath: {
       cs: "wok-speciality/udon-mango-curry.html",
       en: "en/wok-specialities/udon-mango-curry.html"
+    },
+    image: {
+      src: "assets/dishes/udon-mango-curry-chicken.jpg",
+      alt: {
+        cs: "Udon Mango Curry s kuřecím",
+        en: "Udon Mango Curry with chicken"
+      }
     },
     cs: {
       name: "Udon mango kari",
@@ -569,6 +583,13 @@ const menuItems = [
       cs: "smazene-nudle/stir-fried-pho-noodles.html",
       en: "en/stir-fried-noodles/stir-fried-pho-noodles.html"
     },
+    image: {
+      src: "assets/dishes/stir-fried-pho-noodles-chicken.jpg",
+      alt: {
+        cs: "Restované pho nudle s kuřecím",
+        en: "Stir-Fried Pho Noodles with chicken"
+      }
+    },
     cs: {
       name: "Restované pho nudle",
       price: "239 Kč",
@@ -587,6 +608,13 @@ const menuItems = [
     detailPath: {
       cs: "smazene-nudle/stir-fried-glass-noodles.html",
       en: "en/stir-fried-noodles/stir-fried-glass-noodles.html"
+    },
+    image: {
+      src: "assets/dishes/stir-fried-glass-noodles-chicken.jpg",
+      alt: {
+        cs: "Restované skleněné nudle s kuřecím",
+        en: "Stir-Fried Glass Noodles with chicken"
+      }
     },
     cs: {
       name: "Restované skleněné nudle",
