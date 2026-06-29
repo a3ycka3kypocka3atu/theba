@@ -241,6 +241,8 @@ const i18n = {
 
 const categoryKeys = ["all", "starters", "vietnamese", "wok", "noodles", "banhMi", "drinks"];
 const welcomeSeenKey = "the-ba-welcome-seen";
+const welcomeAnimationMs = 430;
+let welcomeCloseTimer = 0;
 const menuSlides = {
   desktop: [
     "Ф/photo horizontal menu/att.oY4JZxObCgYLQSQwXQ_JuY16LpCrTvTYWcXRysEQbOo.JPG",
@@ -1139,19 +1141,30 @@ function wasWelcomeSeen() {
 
 function openWelcomeModal(panelName = "intro") {
   if (!welcomeModal) return;
+  window.clearTimeout(welcomeCloseTimer);
   rememberWelcomeSeen();
   showPopupPanel(panelName);
   welcomeModal.hidden = false;
+  welcomeModal.classList.remove("is-closing");
   document.body.classList.add("modal-open");
 
-  const focusTarget = panelName === "menu" ? menuNextButton : welcomeModal.querySelector("[data-open-menu-gallery]");
-  if (focusTarget) focusTarget.focus({ preventScroll: true });
+  window.requestAnimationFrame(() => {
+    welcomeModal.classList.add("is-open");
+    const focusTarget = panelName === "menu" ? menuNextButton : welcomeModal.querySelector(".welcome-dialog");
+    if (focusTarget) focusTarget.focus({ preventScroll: true });
+  });
 }
 
 function closeWelcomeModal() {
   if (!welcomeModal) return;
-  welcomeModal.hidden = true;
+  window.clearTimeout(welcomeCloseTimer);
+  welcomeModal.classList.remove("is-open");
+  welcomeModal.classList.add("is-closing");
   document.body.classList.remove("modal-open");
+  welcomeCloseTimer = window.setTimeout(() => {
+    welcomeModal.hidden = true;
+    welcomeModal.classList.remove("is-closing");
+  }, welcomeAnimationMs);
 }
 
 function moveMenuSlide(direction) {

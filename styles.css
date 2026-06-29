@@ -279,6 +279,11 @@ h2 {
   font-weight: 900;
 }
 
+.button:focus-visible {
+  outline: 3px solid rgba(35, 116, 93, 0.24);
+  outline-offset: 3px;
+}
+
 .button-primary {
   color: #fff;
   background: var(--red);
@@ -926,6 +931,7 @@ a.menu-card:focus-visible .menu-card-link {
   display: grid;
   place-items: center;
   padding: clamp(14px, 3vw, 32px);
+  pointer-events: none;
 }
 
 .welcome-backdrop {
@@ -935,6 +941,8 @@ a.menu-card:focus-visible .menu-card-link {
   background: rgba(18, 32, 31, 0.48);
   backdrop-filter: blur(10px);
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 280ms ease;
 }
 
 .welcome-dialog {
@@ -949,6 +957,38 @@ a.menu-card:focus-visible .menu-card-link {
     linear-gradient(315deg, rgba(255, 229, 206, 0.82), transparent 42%),
     #fff;
   box-shadow: 0 30px 100px rgba(18, 32, 31, 0.26);
+  opacity: 0;
+  transform: translateY(18px) scale(0.975);
+  transition:
+    opacity 320ms ease,
+    transform 420ms cubic-bezier(0.18, 0.9, 0.24, 1);
+  will-change: opacity, transform;
+}
+
+.welcome-dialog:focus {
+  outline: none;
+}
+
+.welcome-modal.is-open {
+  pointer-events: auto;
+}
+
+.welcome-modal.is-open .welcome-backdrop {
+  opacity: 1;
+}
+
+.welcome-modal.is-open .welcome-dialog {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.welcome-modal.is-closing .welcome-backdrop {
+  opacity: 0;
+}
+
+.welcome-modal.is-closing .welcome-dialog {
+  opacity: 0;
+  transform: translateY(10px) scale(0.985);
 }
 
 .welcome-modal.is-menu-view {
@@ -1009,6 +1049,10 @@ a.menu-card:focus-visible .menu-card-link {
 
 .welcome-panel {
   padding: clamp(28px, 5vw, 48px);
+}
+
+.welcome-panel:not([hidden]) {
+  animation: popup-panel-in 260ms ease both;
 }
 
 .welcome-panel h2 {
@@ -1164,6 +1208,29 @@ a.menu-card:focus-visible .menu-card-link {
 
 .photo-menu-footer .button {
   width: auto;
+}
+
+@keyframes popup-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-backdrop,
+  .welcome-dialog {
+    transition: none;
+  }
+
+  .welcome-panel:not([hidden]) {
+    animation: none;
+  }
 }
 
 .dish-page .site-header .brand {
