@@ -12,7 +12,7 @@
     <title>The Ba - Asian Cuisine</title>
     <link rel="icon" type="image/png" href="assets/favicon.png?v=green2" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=green2" />
-    <link rel="stylesheet" href="styles.css?v=cs1" />
+    <link rel="stylesheet" href="styles.css?v=popup4" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -41,6 +41,7 @@
         <a href="#menu">Menu</a>
         <a href="#hours">Otevírací doba</a>
         <a href="#visit">Kontakt</a>
+        <a href="#review-menu-popup" data-open-welcome-modal>Ohodnotit</a>
         <a class="nav-action" href="tel:+420774054999">Zavolat</a>
       </nav>
     </header>
@@ -171,7 +172,11 @@
           <p class="eyebrow">Google recenze</p>
           <h2 id="reviews-title">Hosté nás na Googlu hodnotí 5,0.</h2>
           <p>Podívejte se na aktuální recenze hostů, kteří chválí pho, kari, závitky i rychlou obsluhu v Odborů 3.</p>
-          <a class="button button-secondary" href="https://www.google.com/maps/place/The+Ba+-+asian+cuisine/@50.077797,14.4158604,17z/data=!4m17!1m8!3m7!1s0x470b94f3dbec57ef:0xb5f4e4a79a337ffb!2zT2Rib3LFryAyODEvMywgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11cslw9th8!3m7!1s0x470b9577c4996591:0x77ac55aab847dc87!8m2!3d50.077797!4d14.4184353!9m1!1b1!16s%2Fg%2F11njpc_yq5?entry=ttu&amp;g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Zobrazit recenze</a>
+          <div class="review-actions">
+            <a class="button button-primary" href="https://www.google.com/maps/place/The+Ba+-+asian+cuisine/@50.077797,14.4158604,17z/data=!4m17!1m8!3m7!1s0x470b94f3dbec57ef:0xb5f4e4a79a337ffb!2zT2Rib3LFryAyODEvMywgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11cslw9th8!3m7!1s0x470b9577c4996591:0x77ac55aab847dc87!8m2!3d50.077797!4d14.4184353!9m1!1b1!16s%2Fg%2F11njpc_yq5?entry=ttu&amp;g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" data-review-link>Zanechat recenzi</a>
+            <button class="button button-secondary" type="button" data-open-photo-menu>Zobrazit fotomenu</button>
+          </div>
+          <p class="review-thanks">Pokud vám u nás chutnalo, krátká recenze nám moc pomůže. Děkujeme.</p>
         </div>
 
         <div class="rating-panel" aria-label="Aktuální hodnocení Google recenzí">
@@ -242,6 +247,48 @@
       <p>Odborů 3, 120 00 Praha - Nové Město</p>
     </footer>
 
-    <script src="script.js?v=lang1"></script>
+    <div class="welcome-modal" id="review-menu-popup" role="dialog" aria-modal="true" aria-labelledby="welcome-title" hidden data-welcome-modal>
+      <button class="welcome-backdrop" type="button" aria-label="Zavřít okno" data-close-welcome></button>
+      <div class="welcome-dialog">
+        <button class="welcome-close" type="button" aria-label="Zavřít okno" data-close-welcome>×</button>
+        <div class="popup-lang-switch" role="group" aria-label="Přepnout jazyk">
+          <button type="button" class="is-active" data-lang="cs">CS</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+
+        <section class="welcome-panel" data-popup-panel="intro">
+          <p class="eyebrow">The Ba</p>
+          <h2 id="welcome-title">Vítejte v The Ba</h2>
+          <p class="welcome-copy">Děkujeme za návštěvu. Přejeme vám příjemný čas a dobrou chuť k našim vietnamským specialitám, pho, kari a závitkům. Pokud vám u nás chutná, budeme moc rádi za krátkou recenzi na Googlu.</p>
+          <div class="welcome-actions">
+            <a class="button button-primary" href="https://www.google.com/maps/place/The+Ba+-+asian+cuisine/@50.077797,14.4158604,17z/data=!4m17!1m8!3m7!1s0x470b94f3dbec57ef:0xb5f4e4a79a337ffb!2zT2Rib3LFryAyODEvMywgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11cslw9th8!3m7!1s0x470b9577c4996591:0x77ac55aab847dc87!8m2!3d50.077797!4d14.4184353!9m1!1b1!16s%2Fg%2F11njpc_yq5?entry=ttu&amp;g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" data-review-link>Zanechat recenzi</a>
+            <button class="button button-secondary" type="button" data-open-menu-gallery>Zobrazit menu</button>
+            <a class="button button-secondary" href="https://www.google.com/maps/place/The+Ba+-+asian+cuisine/@50.077797,14.4158604,17z/data=!4m15!1m8!3m7!1s0x470b94f3dbec57ef:0xb5f4e4a79a337ffb!2zT2Rib3LFryAyODEvMywgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11cslw9th8!3m5!1s0x470b9577c4996591:0x77ac55aab847dc87!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11njpc_yq5?entry=ttu&amp;g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" data-location-link>Otevřít mapu</a>
+          </div>
+          <button class="welcome-skip" type="button" data-close-welcome>Pokračovat na web</button>
+        </section>
+
+        <section class="welcome-panel menu-panel" hidden data-popup-panel="menu">
+          <div class="menu-panel-head">
+            <button class="welcome-skip" type="button" data-popup-back>Zpět</button>
+            <p class="eyebrow">Fotomenu</p>
+          </div>
+          <h2 id="photo-menu-title">Menu v obrazech</h2>
+          <div class="photo-menu-carousel" aria-live="polite">
+            <button class="carousel-button" type="button" aria-label="Předchozí stránka menu" data-menu-prev>‹</button>
+            <figure class="photo-menu-frame">
+              <img src="Ф/photo horizontal menu/att.oY4JZxObCgYLQSQwXQ_JuY16LpCrTvTYWcXRysEQbOo.JPG" alt="Fotografie menu The Ba" data-menu-slide />
+            </figure>
+            <button class="carousel-button" type="button" aria-label="Další stránka menu" data-menu-next>›</button>
+          </div>
+          <div class="photo-menu-footer">
+            <span data-menu-counter>1 / 2</span>
+            <a class="button button-primary" href="https://www.google.com/maps/place/The+Ba+-+asian+cuisine/@50.077797,14.4158604,17z/data=!4m17!1m8!3m7!1s0x470b94f3dbec57ef:0xb5f4e4a79a337ffb!2zT2Rib3LFryAyODEvMywgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11cslw9th8!3m7!1s0x470b9577c4996591:0x77ac55aab847dc87!8m2!3d50.077797!4d14.4184353!9m1!1b1!16s%2Fg%2F11njpc_yq5?entry=ttu&amp;g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" data-review-link>Zanechat recenzi</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js?v=popup4"></script>
   </body>
 </html>

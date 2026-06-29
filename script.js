@@ -6,6 +6,7 @@ const i18n = {
     nav: {
       hours: "Otevírací doba",
       visit: "Kontakt",
+      review: "Ohodnotit",
       call: "Zavolat"
     },
     hero: {
@@ -58,6 +59,9 @@ const i18n = {
       score: "5,0",
       starsLabel: "Pětihvězdičkové hodnocení Google",
       panelText: "Aktuální veřejné hodnocení restaurace The Ba na Google Maps.",
+      action: "Zanechat recenzi",
+      menuAction: "Zobrazit fotomenu",
+      thanks: "Pokud vám u nás chutnalo, krátká recenze nám moc pomůže. Děkujeme.",
       cardsLabel: "Vybrané recenze z Google Maps",
       cards: [
         {
@@ -87,6 +91,23 @@ const i18n = {
       mapSmall: "Interaktivní mapa s bodem restaurace The Ba.",
       footerAddress: "Odborů 3, 120 00 Praha - Nové Město"
     },
+    popup: {
+      backdropLabel: "Zavřít okno",
+      closeLabel: "Zavřít okno",
+      eyebrow: "The Ba",
+      title: "Vítejte v The Ba",
+      intro: "Děkujeme za návštěvu. Přejeme vám příjemný čas a dobrou chuť k našim vietnamským specialitám, pho, kari a závitkům. Pokud vám u nás chutná, budeme moc rádi za krátkou recenzi na Googlu.",
+      review: "Zanechat recenzi",
+      menu: "Zobrazit menu",
+      location: "Otevřít mapu",
+      skip: "Pokračovat na web",
+      back: "Zpět",
+      menuEyebrow: "Fotomenu",
+      menuTitle: "Menu v obrazech",
+      prev: "Předchozí stránka menu",
+      next: "Další stránka menu",
+      menuAlt: "Fotografie menu The Ba"
+    },
     categories: {
       all: "Vše",
       starters: "Předkrmy",
@@ -104,6 +125,7 @@ const i18n = {
     nav: {
       hours: "Hours",
       visit: "Visit",
+      review: "Review us",
       call: "Call"
     },
     hero: {
@@ -156,6 +178,9 @@ const i18n = {
       score: "5.0",
       starsLabel: "Five-star Google rating",
       panelText: "Current public rating for The Ba restaurant on Google Maps.",
+      action: "Leave a review",
+      menuAction: "View photo menu",
+      thanks: "If you enjoyed your visit, a short review helps us a lot. Thank you.",
       cardsLabel: "Selected Google Maps reviews",
       cards: [
         {
@@ -185,6 +210,23 @@ const i18n = {
       mapSmall: "Interactive map with The Ba restaurant location.",
       footerAddress: "Odborů 3, 120 00 Prague - New Town"
     },
+    popup: {
+      backdropLabel: "Close window",
+      closeLabel: "Close window",
+      eyebrow: "The Ba",
+      title: "Welcome to The Ba",
+      intro: "Thank you for visiting us. We wish you a lovely time and a great meal with our Vietnamese specialities, pho, curry and rolls. If you enjoyed your visit, we would be grateful for a short Google review.",
+      review: "Leave a review",
+      menu: "View menu",
+      location: "Open map",
+      skip: "Continue to website",
+      back: "Back",
+      menuEyebrow: "Photo menu",
+      menuTitle: "Menu in pictures",
+      prev: "Previous menu page",
+      next: "Next menu page",
+      menuAlt: "The Ba photo menu"
+    },
     categories: {
       all: "All",
       starters: "Starters",
@@ -198,6 +240,19 @@ const i18n = {
 };
 
 const categoryKeys = ["all", "starters", "vietnamese", "wok", "noodles", "banhMi", "drinks"];
+const welcomeSeenKey = "the-ba-welcome-seen";
+const menuSlides = {
+  desktop: [
+    "Ф/photo horizontal menu/att.oY4JZxObCgYLQSQwXQ_JuY16LpCrTvTYWcXRysEQbOo.JPG",
+    "Ф/photo horizontal menu/att.rv__Ev1R3dW6dmyMyyECduRoD2jGuCxJgqLZwRHSivc.JPG"
+  ],
+  mobile: [
+    "Ф/vertical menu /image.jpg",
+    "Ф/vertical menu /image-2.jpg",
+    "Ф/vertical menu /image-3.jpg",
+    "Ф/vertical menu /image-4.jpg"
+  ]
+};
 
 const menuItems = [
   {
@@ -819,7 +874,8 @@ const menuItems = [
 const state = {
   lang: localStorage.getItem("the-ba-language") || "cs",
   category: "all",
-  search: ""
+  search: "",
+  menuSlide: 0
 };
 
 const categoryContainer = document.querySelector("[data-categories]");
@@ -831,6 +887,17 @@ const nav = document.querySelector("[data-nav]");
 const todayHours = document.querySelector("[data-today-hours]");
 const langSwitch = document.querySelector(".lang-switch");
 const langButtons = document.querySelectorAll("[data-lang]");
+const welcomeModal = document.querySelector("[data-welcome-modal]");
+const popupPanels = document.querySelectorAll("[data-popup-panel]");
+const openWelcomeButtons = document.querySelectorAll("[data-open-welcome-modal]");
+const openPhotoMenuButtons = document.querySelectorAll("[data-open-photo-menu]");
+const closeWelcomeButtons = document.querySelectorAll("[data-close-welcome]");
+const openMenuGalleryButton = document.querySelector("[data-open-menu-gallery]");
+const popupBackButton = document.querySelector("[data-popup-back]");
+const menuSlideImage = document.querySelector("[data-menu-slide]");
+const menuCounter = document.querySelector("[data-menu-counter]");
+const menuPrevButton = document.querySelector("[data-menu-prev]");
+const menuNextButton = document.querySelector("[data-menu-next]");
 
 function setText(selector, value) {
   const element = document.querySelector(selector);
@@ -849,8 +916,10 @@ function translateStaticCopy() {
   setAttribute("meta[name='description']", "content", copy.metaDescription);
   setAttribute(".brand", "aria-label", copy.brandLabel);
   setAttribute(".lang-switch", "aria-label", copy.langLabel);
+  setAttribute(".popup-lang-switch", "aria-label", copy.langLabel);
   setText(".site-nav a[href='#hours']", copy.nav.hours);
   setText(".site-nav a[href='#visit']", copy.nav.visit);
+  setText(".site-nav a[data-open-welcome-modal]", copy.nav.review);
   setText(".site-nav .nav-action", copy.nav.call);
   setText(".hero-copy .eyebrow", copy.hero.eyebrow);
   setText(".hero-subtitle", copy.hero.subtitle);
@@ -890,7 +959,9 @@ function translateStaticCopy() {
   setText(".reviews-summary .eyebrow", copy.reviews.eyebrow);
   setText("#reviews-title", copy.reviews.title);
   setText(".reviews-summary p:not(.eyebrow)", copy.reviews.intro);
-  setText(".reviews-summary .button", copy.reviews.link);
+  setText(".review-actions [data-review-link]", copy.reviews.action);
+  setText(".review-actions button", copy.reviews.menuAction);
+  setText(".review-thanks", copy.reviews.thanks);
   setAttribute(".rating-panel", "aria-label", copy.reviews.panelLabel);
   setText(".rating-topline strong", copy.reviews.rating);
   setText(".rating-topline small", copy.reviews.coming);
@@ -916,6 +987,23 @@ function translateStaticCopy() {
   setText(".map-placeholder span", copy.visit.map);
   setText(".map-placeholder small", copy.visit.mapSmall);
   setText(".site-footer p:last-child", copy.visit.footerAddress);
+
+  setAttribute(".welcome-backdrop", "aria-label", copy.popup.backdropLabel);
+  setAttribute(".welcome-close", "aria-label", copy.popup.closeLabel);
+  setText(".welcome-panel .eyebrow", copy.popup.eyebrow);
+  setText("#welcome-title", copy.popup.title);
+  setText(".welcome-copy", copy.popup.intro);
+  setText(".welcome-actions [data-review-link]", copy.popup.review);
+  setText("[data-open-menu-gallery]", copy.popup.menu);
+  setText("[data-location-link]", copy.popup.location);
+  setText(".welcome-panel [data-close-welcome].welcome-skip", copy.popup.skip);
+  setText("[data-popup-back]", copy.popup.back);
+  setText(".menu-panel-head .eyebrow", copy.popup.menuEyebrow);
+  setText("#photo-menu-title", copy.popup.menuTitle);
+  setAttribute("[data-menu-prev]", "aria-label", copy.popup.prev);
+  setAttribute("[data-menu-next]", "aria-label", copy.popup.next);
+  setText(".photo-menu-footer [data-review-link]", copy.popup.review);
+  updateMenuSlide();
 }
 
 function createCategoryTabs() {
@@ -1006,6 +1094,72 @@ function renderTodayHours() {
   todayHours.textContent = day === 0 ? copy.openSunday : copy.openRegular;
 }
 
+function getActiveMenuSlides() {
+  const isSmallScreen = window.matchMedia("(max-width: 740px)").matches;
+  return isSmallScreen ? menuSlides.mobile : menuSlides.desktop;
+}
+
+function updateMenuSlide() {
+  if (!menuSlideImage || !menuCounter) return;
+  const slides = getActiveMenuSlides();
+  state.menuSlide = Math.min(Math.max(state.menuSlide, 0), slides.length - 1);
+  menuSlideImage.src = slides[state.menuSlide];
+  menuSlideImage.alt = `${i18n[state.lang].popup.menuAlt} ${state.menuSlide + 1}`;
+  menuCounter.textContent = `${state.menuSlide + 1} / ${slides.length}`;
+}
+
+function showPopupPanel(panelName) {
+  popupPanels.forEach((panel) => {
+    panel.hidden = panel.dataset.popupPanel !== panelName;
+  });
+
+  welcomeModal?.classList.toggle("is-menu-view", panelName === "menu");
+
+  if (panelName === "menu") {
+    updateMenuSlide();
+  }
+}
+
+function rememberWelcomeSeen() {
+  try {
+    sessionStorage.setItem(welcomeSeenKey, "true");
+  } catch (error) {
+    return false;
+  }
+  return true;
+}
+
+function wasWelcomeSeen() {
+  try {
+    return sessionStorage.getItem(welcomeSeenKey) === "true";
+  } catch (error) {
+    return false;
+  }
+}
+
+function openWelcomeModal(panelName = "intro") {
+  if (!welcomeModal) return;
+  rememberWelcomeSeen();
+  showPopupPanel(panelName);
+  welcomeModal.hidden = false;
+  document.body.classList.add("modal-open");
+
+  const focusTarget = panelName === "menu" ? menuNextButton : welcomeModal.querySelector("[data-open-menu-gallery]");
+  if (focusTarget) focusTarget.focus({ preventScroll: true });
+}
+
+function closeWelcomeModal() {
+  if (!welcomeModal) return;
+  welcomeModal.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
+function moveMenuSlide(direction) {
+  const slides = getActiveMenuSlides();
+  state.menuSlide = (state.menuSlide + direction + slides.length) % slides.length;
+  updateMenuSlide();
+}
+
 function setLanguage(lang) {
   state.lang = lang;
   localStorage.setItem("the-ba-language", lang);
@@ -1037,7 +1191,7 @@ searchInput.addEventListener("input", (event) => {
   renderMenu();
 });
 
-langSwitch.addEventListener("click", (event) => {
+document.addEventListener("click", (event) => {
   const button = event.target.closest("[data-lang]");
   if (!button) return;
   setLanguage(button.dataset.lang);
@@ -1055,4 +1209,62 @@ nav.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", "false");
 });
 
+openWelcomeButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    openWelcomeModal("intro");
+  });
+});
+
+openPhotoMenuButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    state.menuSlide = 0;
+    openWelcomeModal("menu");
+  });
+});
+
+closeWelcomeButtons.forEach((button) => {
+  button.addEventListener("click", closeWelcomeModal);
+});
+
+if (openMenuGalleryButton) {
+  openMenuGalleryButton.addEventListener("click", () => {
+    state.menuSlide = 0;
+    showPopupPanel("menu");
+  });
+}
+
+if (popupBackButton) {
+  popupBackButton.addEventListener("click", () => showPopupPanel("intro"));
+}
+
+if (menuPrevButton) {
+  menuPrevButton.addEventListener("click", () => moveMenuSlide(-1));
+}
+
+if (menuNextButton) {
+  menuNextButton.addEventListener("click", () => moveMenuSlide(1));
+}
+
+window.addEventListener("keydown", (event) => {
+  if (welcomeModal?.hidden) return;
+
+  if (event.key === "Escape") {
+    closeWelcomeModal();
+    return;
+  }
+
+  const menuPanel = document.querySelector("[data-popup-panel='menu']");
+  if (!menuPanel || menuPanel.hidden) return;
+
+  if (event.key === "ArrowLeft") moveMenuSlide(-1);
+  if (event.key === "ArrowRight") moveMenuSlide(1);
+});
+
+window.addEventListener("resize", updateMenuSlide);
+
 setLanguage(state.lang);
+
+if (!wasWelcomeSeen()) {
+  window.setTimeout(() => openWelcomeModal("intro"), 550);
+}
