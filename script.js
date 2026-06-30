@@ -263,6 +263,13 @@ const menuItems = [
       cs: "predkrmy/vege-rolls.html",
       en: "en/starters/vege-rolls.html"
     },
+    image: {
+      src: "%D0%A4/zavitky/vege-rolls%3A.jpg",
+      alt: {
+        cs: "Vegetariánské závitky",
+        en: "Vege Rolls"
+      }
+    },
     cs: {
       name: "Vegetariánské závitky",
       price: "89 Kč",
@@ -281,6 +288,13 @@ const menuItems = [
     detailPath: {
       cs: "predkrmy/fried-spring-rolls.html",
       en: "en/starters/fried-spring-rolls.html"
+    },
+    image: {
+      src: "%D0%A4/zavitky/fried-spring-rolls%3A.jpg",
+      alt: {
+        cs: "Smažené jarní závitky",
+        en: "Fried Spring Rolls"
+      }
     },
     cs: {
       name: "Smažené jarní závitky",
@@ -301,6 +315,13 @@ const menuItems = [
       cs: "predkrmy/shrimps-tempura.html",
       en: "en/starters/shrimps-tempura.html"
     },
+    image: {
+      src: "%D0%A4/zavitky/shrimps-tempura%3A.jpg",
+      alt: {
+        cs: "Krevety tempura",
+        en: "Shrimps Tempura"
+      }
+    },
     cs: {
       name: "Krevety tempura",
       price: "129 Kč",
@@ -319,6 +340,13 @@ const menuItems = [
     detailPath: {
       cs: "predkrmy/fresh-spring-rolls.html",
       en: "en/starters/fresh-spring-rolls.html"
+    },
+    image: {
+      src: "%D0%A4/zavitky/fresh-spring-rolls%3A.jpg",
+      alt: {
+        cs: "Čerstvé závitky",
+        en: "Fresh Spring Rolls"
+      }
     },
     cs: {
       name: "Čerstvé závitky",
@@ -550,6 +578,13 @@ const menuItems = [
       cs: "wok-speciality/red-curry-with-rice.html",
       en: "en/wok-specialities/red-curry-with-rice.html"
     },
+    image: {
+      src: "%D0%A4/kari%3A.jpg",
+      alt: {
+        cs: "Červené kari s rýží",
+        en: "Red Curry with Rice"
+      }
+    },
     cs: {
       name: "Červené kari s rýží",
       price: "249 Kč",
@@ -568,6 +603,13 @@ const menuItems = [
     detailPath: {
       cs: "wok-speciality/yellow-curry-with-rice.html",
       en: "en/wok-specialities/yellow-curry-with-rice.html"
+    },
+    image: {
+      src: "%D0%A4/kari%3A.jpg",
+      alt: {
+        cs: "Žluté kari s rýží",
+        en: "Yellow Curry with Rice"
+      }
     },
     cs: {
       name: "Žluté kari s rýží",
@@ -589,7 +631,7 @@ const menuItems = [
       en: "en/wok-specialities/udon-wok.html"
     },
     image: {
-      src: "assets/dishes/udon-wok-beef.jpg",
+      src: "%D0%A4/new%20photos/Udon%20wok%20with%20beef%3A.jpg",
       alt: {
         cs: "Udon Wok s hovězím",
         en: "Udon Wok with beef"
@@ -615,7 +657,7 @@ const menuItems = [
       en: "en/wok-specialities/udon-mango-curry.html"
     },
     image: {
-      src: "assets/dishes/udon-mango-curry-chicken.jpg",
+      src: "%D0%A4/new%20photos/Udon%20mango%20curry%20with%20chicken%3A.jpg",
       alt: {
         cs: "Udon Mango Curry s kuřecím",
         en: "Udon Mango Curry with chicken"
@@ -641,7 +683,7 @@ const menuItems = [
       en: "en/stir-fried-noodles/stir-fried-pho-noodles.html"
     },
     image: {
-      src: "assets/dishes/stir-fried-pho-noodles-chicken.jpg",
+      src: "%D0%A4/new%20photos/Stir%20fried%20pho%20noodle%20with%20chicken%3A.jpg",
       alt: {
         cs: "Restované pho nudle s kuřecím",
         en: "Stir-Fried Pho Noodles with chicken"
@@ -667,7 +709,7 @@ const menuItems = [
       en: "en/stir-fried-noodles/stir-fried-glass-noodles.html"
     },
     image: {
-      src: "assets/dishes/stir-fried-glass-noodles-chicken.jpg",
+      src: "%D0%A4/new%20photos/Glass%20noodles%20with%20chicken%3A.jpg",
       alt: {
         cs: "Restované skleněné nudle s kuřecím",
         en: "Stir-Fried Glass Noodles with chicken"
