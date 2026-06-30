@@ -264,7 +264,7 @@ const menuItems = [
       en: "en/starters/vege-rolls.html"
     },
     image: {
-      src: "%D0%A4/zavitky/vege-rolls%3A.jpg",
+      src: "%D0%A4/zavitky/vege-rolls-cutout.png",
       alt: {
         cs: "Vegetariánské závitky",
         en: "Vege Rolls"
@@ -290,7 +290,7 @@ const menuItems = [
       en: "en/starters/fried-spring-rolls.html"
     },
     image: {
-      src: "%D0%A4/zavitky/fried-spring-rolls%3A.jpg",
+      src: "%D0%A4/zavitky/fried-spring-rolls-cutout.png",
       alt: {
         cs: "Smažené jarní závitky",
         en: "Fried Spring Rolls"
@@ -316,7 +316,7 @@ const menuItems = [
       en: "en/starters/shrimps-tempura.html"
     },
     image: {
-      src: "%D0%A4/zavitky/shrimps-tempura%3A.jpg",
+      src: "%D0%A4/zavitky/shrimps-tempura-cutout.png",
       alt: {
         cs: "Krevety tempura",
         en: "Shrimps Tempura"
@@ -342,7 +342,7 @@ const menuItems = [
       en: "en/starters/fresh-spring-rolls.html"
     },
     image: {
-      src: "%D0%A4/zavitky/fresh-spring-rolls%3A.jpg",
+      src: "%D0%A4/zavitky/fresh-spring-rolls-cutout.png",
       alt: {
         cs: "Čerstvé závitky",
         en: "Fresh Spring Rolls"
@@ -369,7 +369,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/pho-bo-classic.html"
     },
     image: {
-      src: "photo%20menu%202/Pho%20Bo%20Classic.png",
+      src: "photo%20menu%202/Pho%20Bo%20Classic-cutout.png",
       alt: {
         cs: "Pho Bo Classic",
         en: "Pho Bo Classic"
@@ -395,7 +395,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/pho-bo-tai-lan.html"
     },
     image: {
-      src: "photo%20menu%202/Pho%20Bo%20Tai%20Lan.png",
+      src: "photo%20menu%202/Pho%20Bo%20Tai%20Lan-cutout.png",
       alt: {
         cs: "Pho Bo Tai Lan",
         en: "Pho Bo Tai Lan"
@@ -421,7 +421,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/pho-ga.html"
     },
     image: {
-      src: "photo%20menu%202/Pho%20Ga.png",
+      src: "photo%20menu%202/Pho%20Ga-cutout.png",
       alt: {
         cs: "Pho Ga",
         en: "Pho Ga"
@@ -447,7 +447,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-tom-hue.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Tom%20Hue.png",
+      src: "photo%20menu%202/Bun%20Tom%20Hue-cutout.png",
       alt: {
         cs: "Bun Tom Hue",
         en: "Bun Tom Hue"
@@ -474,7 +474,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-bo-nam-bo.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Bo%20Nam%20Bo.png",
+      src: "photo%20menu%202/Bun%20Bo%20Nam%20Bo-cutout.png",
       alt: {
         cs: "Bun Bo Nam Bo",
         en: "Bun Bo Nam Bo"
@@ -500,7 +500,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-cha.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Cha.png",
+      src: "photo%20menu%202/Bun%20Cha-cutout.png",
       alt: {
         cs: "Bun Cha",
         en: "Bun Cha"
@@ -526,7 +526,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-nem.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Nem.png",
+      src: "photo%20menu%202/Bun%20Nem-cutout.png",
       alt: {
         cs: "Bun Nem",
         en: "Bun Nem"
@@ -552,7 +552,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-tofu.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Tofu.png",
+      src: "photo%20menu%202/Bun%20Tofu-cutout.png",
       alt: {
         cs: "Bun Tofu",
         en: "Bun Tofu"
@@ -579,7 +579,7 @@ const menuItems = [
       en: "en/wok-specialities/red-curry-with-rice.html"
     },
     image: {
-      src: "%D0%A4/kari%3A.jpg",
+      src: "%D0%A4/kari%3A-cutout.png",
       alt: {
         cs: "Červené kari s rýží",
         en: "Red Curry with Rice"
@@ -605,7 +605,7 @@ const menuItems = [
       en: "en/wok-specialities/yellow-curry-with-rice.html"
     },
     image: {
-      src: "%D0%A4/kari%3A.jpg",
+      src: "%D0%A4/kari%3A-cutout.png",
       alt: {
         cs: "Žluté kari s rýží",
         en: "Yellow Curry with Rice"
@@ -631,7 +631,7 @@ const menuItems = [
       en: "en/wok-specialities/udon-wok.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Udon%20wok%20with%20beef%3A.jpg",
+      src: "%D0%A4/new%20photos/Udon%20wok%20with%20beef%3A-cutout.png",
       alt: {
         cs: "Udon Wok s hovězím",
         en: "Udon Wok with beef"
@@ -657,7 +657,7 @@ const menuItems = [
       en: "en/wok-specialities/udon-mango-curry.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Udon%20mango%20curry%20with%20chicken%3A.jpg",
+      src: "%D0%A4/new%20photos/Udon%20mango%20curry%20with%20chicken%3A-cutout.png",
       alt: {
         cs: "Udon Mango Curry s kuřecím",
         en: "Udon Mango Curry with chicken"
@@ -683,7 +683,7 @@ const menuItems = [
       en: "en/stir-fried-noodles/stir-fried-pho-noodles.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Stir%20fried%20pho%20noodle%20with%20chicken%3A.jpg",
+      src: "%D0%A4/new%20photos/Stir%20fried%20pho%20noodle%20with%20chicken%3A-cutout.png",
       alt: {
         cs: "Restované pho nudle s kuřecím",
         en: "Stir-Fried Pho Noodles with chicken"
@@ -709,7 +709,7 @@ const menuItems = [
       en: "en/stir-fried-noodles/stir-fried-glass-noodles.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Glass%20noodles%20with%20chicken%3A.jpg",
+      src: "%D0%A4/new%20photos/Glass%20noodles%20with%20chicken%3A-cutout.png",
       alt: {
         cs: "Restované skleněné nudle s kuřecím",
         en: "Stir-Fried Glass Noodles with chicken"
