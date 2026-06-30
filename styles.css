@@ -1006,6 +1006,10 @@ a.menu-card:focus-visible .menu-card-link {
   padding: clamp(18px, 3vw, 34px);
 }
 
+.welcome-modal.is-menu-view .welcome-panel[hidden] {
+  display: none;
+}
+
 .welcome-modal.is-menu-view .welcome-panel h2 {
   font-size: clamp(32px, 4vw, 54px);
 }
