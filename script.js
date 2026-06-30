@@ -963,7 +963,7 @@ function translateStaticCopy() {
   setAttribute(".popup-lang-switch", "aria-label", copy.langLabel);
   setText(".site-nav a[href='#hours']", copy.nav.hours);
   setText(".site-nav a[href='#visit']", copy.nav.visit);
-  setText(".site-nav a[data-open-welcome-modal]", copy.nav.review);
+  setText(".site-nav a[data-nav-review]", copy.nav.review);
   setText(".site-nav .nav-action", copy.nav.call);
   setText(".hero-copy .eyebrow", copy.hero.eyebrow);
   setText(".hero-subtitle", copy.hero.subtitle);
