@@ -1096,7 +1096,7 @@ function renderMenu() {
   menuContainer.innerHTML = items
     .map((item) => {
       const localized = item[state.lang];
-      const cardClass = `menu-card ${item.featured ? "is-featured" : ""}`;
+      const cardClass = ["menu-card", item.image ? "has-photo" : "", item.featured ? "is-featured" : ""].filter(Boolean).join(" ");
       const detailPath = typeof item.detailPath === "string" ? item.detailPath : item.detailPath?.[state.lang];
       const cardTag = detailPath ? "a" : "article";
       const cardAttributes = detailPath
