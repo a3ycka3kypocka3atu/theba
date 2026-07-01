@@ -4,6 +4,7 @@ const i18n = {
     brandLabel: "The Ba úvodní stránka",
     langLabel: "Přepnout jazyk",
     nav: {
+      gallery: "Fotky",
       hours: "Otevírací doba",
       visit: "Kontakt",
       review: "Ohodnotit",
@@ -20,11 +21,6 @@ const i18n = {
       openRegular: "Otevřeno 11:00-22:00",
       openSunday: "Otevřeno 11:30-22:00"
     },
-    quick: [
-      ["Vietnamské klasiky", "Pho, bún misky a čerstvé závitky"],
-      ["Wok na oběd i večeři", "Kari, udon nudle a smažené nudle"],
-      ["Matcha a káva", "Matcha cloud, vietnamská káva a čaje"]
-    ],
     menu: {
       title: "Čerstvě připravené a přehledně naceněné.",
       intro: "Vyberte si kategorii nebo vyhledejte jídlo, surovinu, nápoj či cenu.",
@@ -37,8 +33,8 @@ const i18n = {
     },
     gallery: {
       eyebrow: "Fotografie",
-      title: "Atmosféra The Ba",
-      label: "Fotografie restaurace a nápojů The Ba"
+      title: "Atmosféra a ulice The Ba",
+      label: "Fotografie restaurace, ulice a nápojů The Ba"
     },
     hours: {
       eyebrow: "Otevírací doba",
@@ -46,7 +42,12 @@ const i18n = {
       intro: "Zastavte se na oběd, večeři, kávu i osvěžující nápoje během celého týdne.",
       mondaySaturday: "Pondělí - sobota",
       sunday: "Neděle",
-      holidays: "Svátky"
+      holidays: "Svátky",
+      placeKicker: "Odborů 3",
+      placeTitle: "Pár kroků od Národní třídy.",
+      placeIntro: "Najdete nás v klidnější ulici Nového Města, blízko tramvaje i metra.",
+      placeMap: "Otevřít v mapách",
+      placeImageAlt: "Ulice Odborů u restaurace The Ba při západu slunce"
     },
     reviews: {
       eyebrow: "Google recenze",
@@ -62,6 +63,7 @@ const i18n = {
       action: "Zanechat recenzi",
       menuAction: "Zobrazit fotomenu",
       thanks: "Pokud vám u nás chutnalo, krátká recenze nám moc pomůže. Děkujeme.",
+      photoAlt: "Vstup do restaurace The Ba na Odborů 3",
       cardsLabel: "Vybrané recenze z Google Maps",
       cards: [
         {
@@ -123,6 +125,7 @@ const i18n = {
     brandLabel: "The Ba home",
     langLabel: "Switch language",
     nav: {
+      gallery: "Photos",
       hours: "Hours",
       visit: "Visit",
       review: "Review us",
@@ -139,11 +142,6 @@ const i18n = {
       openRegular: "Open 11:00-22:00",
       openSunday: "Open 11:30-22:00"
     },
-    quick: [
-      ["Vietnamese classics", "Pho, bún bowls and fresh rolls"],
-      ["Wok for lunch and dinner", "Curry, udon and stir-fried noodles"],
-      ["Matcha and coffee", "Matcha cloud, Vietnamese coffee and teas"]
-    ],
     menu: {
       title: "Freshly prepared and clearly priced.",
       intro: "Choose a category or search by dish, ingredient, drink or price.",
@@ -156,8 +154,8 @@ const i18n = {
     },
     gallery: {
       eyebrow: "Photos",
-      title: "Inside The Ba",
-      label: "Photos of The Ba restaurant and drinks"
+      title: "The Ba, inside and from the street",
+      label: "Photos of The Ba restaurant, street and drinks"
     },
     hours: {
       eyebrow: "Opening Hours",
@@ -165,7 +163,12 @@ const i18n = {
       intro: "Stop by for lunch, dinner, coffee and refreshing drinks throughout the week.",
       mondaySaturday: "Monday - Saturday",
       sunday: "Sunday",
-      holidays: "Holidays"
+      holidays: "Holidays",
+      placeKicker: "Odborů 3",
+      placeTitle: "A few steps from Národní třída.",
+      placeIntro: "Find us on a calmer New Town street, close to tram and metro connections.",
+      placeMap: "Open in Maps",
+      placeImageAlt: "Odborů street by The Ba at sunset"
     },
     reviews: {
       eyebrow: "Google Reviews",
@@ -181,6 +184,7 @@ const i18n = {
       action: "Leave a review",
       menuAction: "View photo menu",
       thanks: "If you enjoyed your visit, a short review helps us a lot. Thank you.",
+      photoAlt: "Entrance to The Ba restaurant at Odborů 3",
       cardsLabel: "Selected Google Maps reviews",
       cards: [
         {
@@ -245,14 +249,14 @@ const welcomeAnimationMs = 430;
 let welcomeCloseTimer = 0;
 const menuSlides = {
   desktop: [
-    "Ф/photo horizontal menu/att.oY4JZxObCgYLQSQwXQ_JuY16LpCrTvTYWcXRysEQbOo.JPG",
-    "Ф/photo horizontal menu/att.rv__Ev1R3dW6dmyMyyECduRoD2jGuCxJgqLZwRHSivc.JPG"
+    "Ф/menu pdf/photo horizontal menu/att.oY4JZxObCgYLQSQwXQ_JuY16LpCrTvTYWcXRysEQbOo.JPG",
+    "Ф/menu pdf/photo horizontal menu/att.rv__Ev1R3dW6dmyMyyECduRoD2jGuCxJgqLZwRHSivc.JPG"
   ],
   mobile: [
-    "Ф/vertical menu /image.jpg",
-    "Ф/vertical menu /image-2.jpg",
-    "Ф/vertical menu /image-3.jpg",
-    "Ф/vertical menu /image-4.jpg"
+    "Ф/menu pdf/vertical menu /image.jpg",
+    "Ф/menu pdf/vertical menu /image-2.jpg",
+    "Ф/menu pdf/vertical menu /image-3.jpg",
+    "Ф/menu pdf/vertical menu /image-4.jpg"
   ]
 };
 
@@ -962,6 +966,7 @@ function translateStaticCopy() {
   setAttribute(".lang-switch", "aria-label", copy.langLabel);
   setAttribute(".popup-lang-switch", "aria-label", copy.langLabel);
   setText(".site-nav a[href='#hours']", copy.nav.hours);
+  setText(".site-nav a[href='#gallery']", copy.nav.gallery);
   setText(".site-nav a[href='#visit']", copy.nav.visit);
   setText(".site-nav a[data-nav-review]", copy.nav.review);
   setText(".site-nav .nav-action", copy.nav.call);
@@ -973,14 +978,6 @@ function translateStaticCopy() {
   setAttribute(".hero-visual", "aria-label", copy.hero.visualLabel);
   setText(".hero-note strong", copy.hero.today);
 
-  document.querySelectorAll(".quick-info div").forEach((card, index) => {
-    const quick = copy.quick[index];
-    if (!quick) return;
-    card.querySelector("strong").textContent = quick[0];
-    card.querySelector("span").textContent = quick[1];
-  });
-
-  setAttribute(".quick-info", "aria-label", state.lang === "cs" ? "Hlavní nabídka restaurace" : "Restaurant highlights");
   setText("#menu-title", copy.menu.title);
   setText(".menu-section .section-heading p:not(.eyebrow)", copy.menu.intro);
   setAttribute("[data-categories]", "aria-label", copy.menu.categoriesLabel);
@@ -999,6 +996,11 @@ function translateStaticCopy() {
   hourRows[0].textContent = copy.hours.mondaySaturday;
   hourRows[1].textContent = copy.hours.sunday;
   hourRows[2].textContent = copy.hours.holidays;
+  setText(".place-card-kicker", copy.hours.placeKicker);
+  setText("#place-title", copy.hours.placeTitle);
+  setText(".place-card-copy p", copy.hours.placeIntro);
+  setText(".place-map-link", copy.hours.placeMap);
+  setAttribute(".place-card img", "alt", copy.hours.placeImageAlt);
 
   setText(".reviews-summary .eyebrow", copy.reviews.eyebrow);
   setText("#reviews-title", copy.reviews.title);
@@ -1006,6 +1008,7 @@ function translateStaticCopy() {
   setText(".review-actions [data-review-link]", copy.reviews.action);
   setText(".review-actions button", copy.reviews.menuAction);
   setText(".review-thanks", copy.reviews.thanks);
+  setAttribute(".reviews-photo img", "alt", copy.reviews.photoAlt);
   setAttribute(".rating-panel", "aria-label", copy.reviews.panelLabel);
   setText(".rating-topline strong", copy.reviews.rating);
   setText(".rating-topline small", copy.reviews.coming);

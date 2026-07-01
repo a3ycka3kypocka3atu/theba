@@ -12,7 +12,7 @@
     <title>The Ba - Asian Cuisine</title>
     <link rel="icon" type="image/png" href="assets/favicon.png?v=green2" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=green2" />
-    <link rel="stylesheet" href="styles.css?v=popup5" />
+    <link rel="stylesheet" href="styles.css?v=no-quick1" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -39,6 +39,7 @@
 
       <nav class="site-nav" id="site-nav" data-nav>
         <a href="#menu">Menu</a>
+        <a href="#gallery">Fotky</a>
         <a href="#hours">Otevírací doba</a>
         <a href="#visit">Kontakt</a>
         <a href="https://www.google.com/maps/place/The+Ba+-+asian+cuisine/@50.077797,14.4158604,17z/data=!3m1!4b1!4m17!1m8!3m7!1s0x470b94f3dbec57ef:0xb5f4e4a79a337ffb!2zT2Rib3LFryAyODEvMywgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11cslw9th8!3m7!1s0x470b9577c4996591:0x77ac55aab847dc87!8m2!3d50.077797!4d14.4184353!9m1!1b1!16s%2Fg%2F11njpc_yq5?entry=ttu&amp;g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" data-nav-review>Ohodnotit</a>
@@ -72,21 +73,6 @@
         </div>
       </section>
 
-      <section class="quick-info" aria-label="Hlavní nabídka restaurace">
-        <div>
-          <strong>Vietnamské klasiky</strong>
-          <span>Pho, bún misky a čerstvé závitky</span>
-        </div>
-        <div>
-          <strong>Wok na oběd i večeři</strong>
-          <span>Kari, udon nudle a smažené nudle</span>
-        </div>
-        <div>
-          <strong>Matcha a káva</strong>
-          <span>Matcha cloud, vietnamská káva a čaje</span>
-        </div>
-      </section>
-
       <section class="menu-section" id="menu" aria-labelledby="menu-title">
         <div class="section-heading">
           <p class="eyebrow">Menu</p>
@@ -109,9 +95,12 @@
       <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
         <div class="section-heading">
           <p class="eyebrow">Fotografie</p>
-          <h2 id="gallery-title">Atmosféra The Ba</h2>
+          <h2 id="gallery-title">Atmosféra a ulice The Ba</h2>
         </div>
         <div class="gallery-grid" aria-label="Fotografie restaurace a nápojů The Ba">
+          <figure class="gallery-item tall">
+            <img src="assets/place/theba-odboru-sunset.png" alt="Ulice Odborů u restaurace The Ba při západu slunce" />
+          </figure>
           <figure class="gallery-item wide">
             <img src="Ф/photo-1.jpg" alt="Interiér restaurace The Ba" loading="lazy" />
           </figure>
@@ -151,18 +140,29 @@
           <h2 id="hours-title">Jsme otevřeni každý den v Novém Městě.</h2>
           <p>Zastavte se na oběd, večeři, kávu i osvěžující nápoje během celého týdne.</p>
         </div>
-        <div class="hours-list">
-          <div>
-            <span>Pondělí - sobota</span>
-            <strong>11:00 - 22:00</strong>
-          </div>
-          <div>
-            <span>Neděle</span>
-            <strong>11:30 - 22:00</strong>
-          </div>
-          <div>
-            <span>Svátky</span>
-            <strong>11:30 - 22:00</strong>
+        <div class="hours-stack">
+          <article class="place-card" aria-labelledby="place-title">
+            <img src="assets/place/theba-odboru-sunset.png" alt="Ulice Odborů u restaurace The Ba při západu slunce" />
+            <div class="place-card-copy">
+              <span class="place-card-kicker">Odborů 3</span>
+              <h3 id="place-title">Pár kroků od Národní třídy.</h3>
+              <p>Najdete nás v klidnější ulici Nového Města, blízko tramvaje i metra.</p>
+              <a class="place-map-link" href="https://www.google.com/maps/place/The+Ba+-+asian+cuisine/@50.077797,14.4158604,17z/data=!4m15!1m8!3m7!1s0x470b94f3dbec57ef:0xb5f4e4a79a337ffb!2zT2Rib3LFryAyODEvMywgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11cslw9th8!3m5!1s0x470b9577c4996591:0x77ac55aab847dc87!8m2!3d50.077797!4d14.4184353!16s%2Fg%2F11njpc_yq5?entry=ttu&amp;g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Otevřít v mapách</a>
+            </div>
+          </article>
+          <div class="hours-list">
+            <div>
+              <span>Pondělí - sobota</span>
+              <strong>11:00 - 22:00</strong>
+            </div>
+            <div>
+              <span>Neděle</span>
+              <strong>11:30 - 22:00</strong>
+            </div>
+            <div>
+              <span>Svátky</span>
+              <strong>11:30 - 22:00</strong>
+            </div>
           </div>
         </div>
       </section>
@@ -178,6 +178,10 @@
           </div>
           <p class="review-thanks">Pokud vám u nás chutnalo, krátká recenze nám moc pomůže. Děkujeme.</p>
         </div>
+
+        <figure class="reviews-photo">
+          <img src="assets/place/theba-front-evening.png" alt="Vstup do restaurace The Ba na Odborů 3" />
+        </figure>
 
         <div class="rating-panel" aria-label="Aktuální hodnocení Google recenzí">
           <div class="rating-topline">
@@ -277,7 +281,7 @@
           <div class="photo-menu-carousel" aria-live="polite">
             <button class="carousel-button" type="button" aria-label="Předchozí stránka menu" data-menu-prev>‹</button>
             <figure class="photo-menu-frame">
-              <img src="Ф/photo horizontal menu/att.oY4JZxObCgYLQSQwXQ_JuY16LpCrTvTYWcXRysEQbOo.JPG" alt="Fotografie menu The Ba" data-menu-slide />
+              <img src="Ф/menu pdf/photo horizontal menu/att.oY4JZxObCgYLQSQwXQ_JuY16LpCrTvTYWcXRysEQbOo.JPG" alt="Fotografie menu The Ba" data-menu-slide />
             </figure>
             <button class="carousel-button" type="button" aria-label="Další stránka menu" data-menu-next>›</button>
           </div>
@@ -289,6 +293,6 @@
       </div>
     </div>
 
-    <script src="script.js?v=popup5"></script>
+    <script src="script.js?v=no-quick1"></script>
   </body>
 </html>
