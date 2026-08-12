@@ -1599,7 +1599,7 @@ a.menu-card:focus-visible .menu-card-link {
     z-index: -1;
     background:
       linear-gradient(90deg, rgba(251, 250, 246, 0.88) 0%, rgba(251, 250, 246, 0.7) 42%, rgba(251, 250, 246, 0.5) 100%),
-      url("Ф/2.jpg") center / cover no-repeat;
+      url("assets/gallery/interior-main.webp") center / cover no-repeat;
     content: "";
     opacity: 0.42;
   }

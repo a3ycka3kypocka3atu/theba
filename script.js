@@ -268,7 +268,7 @@ const menuItems = [
       en: "en/starters/vege-rolls.html"
     },
     image: {
-      src: "%D0%A4/zavitky/vege-rolls-cutout.png",
+      src: "assets/dishes/cards/vege-rolls.webp",
       alt: {
         cs: "Vegetariánské závitky",
         en: "Vege Rolls"
@@ -294,7 +294,7 @@ const menuItems = [
       en: "en/starters/fried-spring-rolls.html"
     },
     image: {
-      src: "%D0%A4/zavitky/fried-spring-rolls-cutout.png",
+      src: "assets/dishes/cards/fried-spring-rolls.webp",
       alt: {
         cs: "Smažené jarní závitky",
         en: "Fried Spring Rolls"
@@ -320,7 +320,7 @@ const menuItems = [
       en: "en/starters/shrimps-tempura.html"
     },
     image: {
-      src: "%D0%A4/zavitky/shrimps-tempura-cutout.png",
+      src: "assets/dishes/cards/shrimps-tempura.webp",
       alt: {
         cs: "Krevety tempura",
         en: "Shrimps Tempura"
@@ -346,7 +346,7 @@ const menuItems = [
       en: "en/starters/fresh-spring-rolls.html"
     },
     image: {
-      src: "%D0%A4/zavitky/fresh-spring-rolls-cutout.png",
+      src: "assets/dishes/cards/fresh-spring-rolls.webp",
       alt: {
         cs: "Čerstvé závitky",
         en: "Fresh Spring Rolls"
@@ -373,7 +373,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/pho-bo-classic.html"
     },
     image: {
-      src: "photo%20menu%202/Pho%20Bo%20Classic-cutout.png",
+      src: "assets/dishes/cards/pho-bo-classic.webp",
       alt: {
         cs: "Pho Bo Classic",
         en: "Pho Bo Classic"
@@ -399,7 +399,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/pho-bo-tai-lan.html"
     },
     image: {
-      src: "photo%20menu%202/Pho%20Bo%20Tai%20Lan-cutout.png",
+      src: "assets/dishes/cards/pho-bo-tai-lan.webp",
       alt: {
         cs: "Pho Bo Tai Lan",
         en: "Pho Bo Tai Lan"
@@ -425,7 +425,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/pho-ga.html"
     },
     image: {
-      src: "photo%20menu%202/Pho%20Ga-cutout.png",
+      src: "assets/dishes/cards/pho-ga.webp",
       alt: {
         cs: "Pho Ga",
         en: "Pho Ga"
@@ -451,7 +451,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-tom-hue.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Tom%20Hue-cutout.png",
+      src: "assets/dishes/cards/bun-tom-hue.webp",
       alt: {
         cs: "Bun Tom Hue",
         en: "Bun Tom Hue"
@@ -478,7 +478,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-bo-nam-bo.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Bo%20Nam%20Bo-cutout.png",
+      src: "assets/dishes/cards/bun-bo-nam-bo.webp",
       alt: {
         cs: "Bun Bo Nam Bo",
         en: "Bun Bo Nam Bo"
@@ -504,7 +504,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-cha.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Cha-cutout.png",
+      src: "assets/dishes/cards/bun-cha.webp",
       alt: {
         cs: "Bun Cha",
         en: "Bun Cha"
@@ -530,7 +530,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-nem.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Nem-cutout.png",
+      src: "assets/dishes/cards/bun-nem.webp",
       alt: {
         cs: "Bun Nem",
         en: "Bun Nem"
@@ -556,7 +556,7 @@ const menuItems = [
       en: "en/vietnamese-specialities/bun-tofu.html"
     },
     image: {
-      src: "photo%20menu%202/Bun%20Tofu-cutout.png",
+      src: "assets/dishes/cards/bun-tofu.webp",
       alt: {
         cs: "Bun Tofu",
         en: "Bun Tofu"
@@ -583,7 +583,7 @@ const menuItems = [
       en: "en/wok-specialities/red-curry-with-rice.html"
     },
     image: {
-      src: "%D0%A4/kari%3A-cutout.png",
+      src: "assets/dishes/cards/curry-rice.webp",
       alt: {
         cs: "Červené kari s rýží",
         en: "Red Curry with Rice"
@@ -609,7 +609,7 @@ const menuItems = [
       en: "en/wok-specialities/yellow-curry-with-rice.html"
     },
     image: {
-      src: "%D0%A4/kari%3A-cutout.png",
+      src: "assets/dishes/cards/curry-rice.webp",
       alt: {
         cs: "Žluté kari s rýží",
         en: "Yellow Curry with Rice"
@@ -635,7 +635,7 @@ const menuItems = [
       en: "en/wok-specialities/udon-wok.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Udon%20wok%20with%20beef%3A-cutout.png",
+      src: "assets/dishes/cards/udon-wok-beef.webp",
       alt: {
         cs: "Udon Wok s hovězím",
         en: "Udon Wok with beef"
@@ -661,7 +661,7 @@ const menuItems = [
       en: "en/wok-specialities/udon-mango-curry.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Udon%20mango%20curry%20with%20chicken%3A-cutout.png",
+      src: "assets/dishes/cards/udon-mango-curry-chicken.webp",
       alt: {
         cs: "Udon Mango Curry s kuřecím",
         en: "Udon Mango Curry with chicken"
@@ -687,7 +687,7 @@ const menuItems = [
       en: "en/stir-fried-noodles/stir-fried-pho-noodles.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Stir%20fried%20pho%20noodle%20with%20chicken%3A-cutout.png",
+      src: "assets/dishes/cards/stir-fried-pho-noodles-chicken.webp",
       alt: {
         cs: "Restované pho nudle s kuřecím",
         en: "Stir-Fried Pho Noodles with chicken"
@@ -713,7 +713,7 @@ const menuItems = [
       en: "en/stir-fried-noodles/stir-fried-glass-noodles.html"
     },
     image: {
-      src: "%D0%A4/new%20photos/Glass%20noodles%20with%20chicken%3A-cutout.png",
+      src: "assets/dishes/cards/stir-fried-glass-noodles-chicken.webp",
       alt: {
         cs: "Restované skleněné nudle s kuřecím",
         en: "Stir-Fried Glass Noodles with chicken"
@@ -1115,7 +1115,7 @@ function renderMenu() {
           <p>${localized.description}</p>
           ${
             item.image
-              ? `<img class="menu-card-photo" src="${item.image.src}" alt="${item.image.alt[state.lang]}" loading="lazy" />`
+              ? `<img class="menu-card-photo" src="${item.image.src}" alt="${item.image.alt[state.lang]}" loading="lazy" decoding="async" />`
               : ""
           }
           <div class="tag-row" aria-label="${copy.itemOptions} ${localized.name}">
